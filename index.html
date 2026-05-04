@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SCOPE: Simulated Controllable Open Playable Environments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --surface: #16161f;
+      --border: rgba(255,255,255,0.07);
+      --accent: #7c6dfa;
+      --accent2: #4fd1c5;
+      --text: #e8e8f0;
+      --text-muted: #7a7a8c;
+      --text-dim: #4a4a5e;
+      --card: #13131b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Subtle grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(124,109,250,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,109,250,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Hero glow */
+    .hero-glow {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(124,109,250,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 90px 24px 60px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .venue-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,109,250,0.12);
+      border: 1px solid rgba(124,109,250,0.25);
+      color: var(--accent);
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .venue-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    h1 .accent { color: var(--accent); }
+    h1 .accent2 { color: var(--accent2); }
+
+    .subtitle {
+      font-size: clamp(14px, 1.8vw, 18px);
+      color: var(--text-muted);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 40px;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .authors {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      animation: fadeUp 0.6s 0.25s ease both;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: #9585fb; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); transform: translateY(-1px); }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── SECTION ─── */
+    section {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    .section-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    /* ─── ABSTRACT ─── */
+    .abstract-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 48px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: #c0c0d0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .abstract-box::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 32px;
+      font-size: 160px;
+      font-family: 'Syne', sans-serif;
+      color: rgba(124,109,250,0.06);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* ─── VIDEO GRID ─── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .video-card:hover {
+      border-color: rgba(124,109,250,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(124,109,250,0.1);
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #0d0d14;
+      overflow: hidden;
+    }
+
+    .video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Play overlay */
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.3);
+      opacity: 1;
+      transition: opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .video-wrap.playing .play-overlay { opacity: 0; pointer-events: none; }
+
+    .play-btn {
+      width: 52px; height: 52px;
+      background: rgba(124,109,250,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .play-overlay:hover .play-btn {
+      transform: scale(1.1);
+      background: var(--accent);
+    }
+
+    .play-btn svg { margin-left: 3px; }
+
+    .video-info {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sample-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+
+    .sample-num {
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'Syne', sans-serif;
+      color: var(--accent);
+      background: rgba(124,109,250,0.1);
+      border: 1px solid rgba(124,109,250,0.2);
+      padding: 2px 8px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+    }
+
+    /* stagger animation */
+    .video-card:nth-child(1) { animation-delay: 0.05s; }
+    .video-card:nth-child(2) { animation-delay: 0.10s; }
+    .video-card:nth-child(3) { animation-delay: 0.15s; }
+    .video-card:nth-child(4) { animation-delay: 0.20s; }
+    .video-card:nth-child(5) { animation-delay: 0.25s; }
+    .video-card:nth-child(6) { animation-delay: 0.30s; }
+    .video-card:nth-child(7) { animation-delay: 0.35s; }
+    .video-card:nth-child(8) { animation-delay: 0.40s; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 640px) {
+      header { padding: 60px 20px 40px; }
+      .abstract-box { padding: 28px 24px; }
+      .video-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="hero-glow"></div>
+    <div class="venue-tag">NeurIPS 2025 · Anonymous Submission</div>
+    <h1><span class="accent">SCOPE</span></h1>
+    <p class="subtitle">Simulated Controllable Open Playable Environments</p>
+    <p class="authors">Anonymous Author(s)</p>
+    <div class="links">
+      <a class="btn btn-secondary" href="#" onclick="return false;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Paper (Coming Soon)
+      </a>
+      <a class="btn btn-secondary" href="#" onclick="return false;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        Code (Coming Soon)
+      </a>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <!-- ABSTRACT -->
+  <section>
+    <div class="section-label">Abstract</div>
+    <div class="section-title">Overview</div>
+    <p class="section-desc">A brief summary of the SCOPE framework and its contributions.</p>
+    <div class="abstract-box">
+      We present <strong>SCOPE</strong> (Simulated Controllable Open Playable Environments), a novel framework for game AI and world modeling. SCOPE enables controllable, open-ended simulation of interactive game environments, providing a powerful testbed for developing and evaluating game AI agents. Our approach demonstrates strong performance across diverse game scenarios, enabling rich and varied gameplay behaviors that were previously difficult to achieve. We present qualitative results below showcasing the capabilities of our method.
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- VIDEO RESULTS -->
+  <section>
+    <div class="section-label">Qualitative Results</div>
+    <div class="section-title">Generated Gameplay Samples</div>
+    <p class="section-desc">Representative outputs from our SCOPE framework across diverse game environments and scenarios.</p>
+
+    <div class="video-grid" id="videoGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Anonymous submission to NeurIPS 2025 &nbsp;·&nbsp; For review purposes only</p>
+  </footer>
+
+  <script>
+    const samples = [
+      { id: 1, src: 'static/videos/1.mp4' },
+      { id: 2, src: 'static/videos/2.mp4' },
+      { id: 3, src: 'static/videos/3.mp4' },
+      { id: 4, src: 'static/videos/4.mp4' },
+      { id: 5, src: 'static/videos/5.mp4' },
+      { id: 6, src: 'static/videos/6.mp4' },
+      { id: 7, src: 'static/videos/7.mp4' },
+      { id: 8, src: 'static/videos/8.mp4' },
+    ];
+
+    const grid = document.getElementById('videoGrid');
+
+    samples.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      card.innerHTML = `
+        <div class="video-wrap" id="wrap-${s.id}">
+          <video src="${s.src}" loop playsinline preload="metadata"></video>
+          <div class="play-overlay" id="overlay-${s.id}">
+            <div class="play-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <span class="sample-label">Sample ${s.id}</span>
+          <span class="sample-num">#${String(s.id).padStart(2,'0')}</span>
+        </div>
+      `;
+      grid.appendChild(card);
+
+      const wrap = card.querySelector('.video-wrap');
+      const video = wrap.querySelector('video');
+      const overlay = wrap.querySelector('.play-overlay');
+
+      overlay.addEventListener('click', () => {
+        // pause all others
+        document.querySelectorAll('.video-wrap video').forEach(v => {
+          if (v !== video) {
+            v.pause();
+            v.closest('.video-wrap').classList.remove('playing');
+          }
+        });
+        if (video.paused) {
+          video.play();
+          wrap.classList.add('playing');
+        } else {
+          video.pause();
+          wrap.classList.remove('playing');
+        }
+      });
+
+      video.addEventListener('click', () => {
+        video.pause();
+        wrap.classList.remove('playing');
+      });
+    });
+  </script>
+</body>
+</html>
