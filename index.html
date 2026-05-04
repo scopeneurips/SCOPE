@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SCOPE: Simulated Controllable Open Playable Environments</title>
+  <title>SCOPE: Simulating Cross-game Operations in Playable Environments for FPS World Models</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -375,7 +375,7 @@
     <div class="hero-glow"></div>
     <div class="venue-tag">NeurIPS 2025 · Anonymous Submission</div>
     <h1><span class="accent">SCOPE</span></h1>
-    <p class="subtitle">Simulated Controllable Open Playable Environments</p>
+    <p class="subtitle">Simulating Cross-game Operations in Playable Environments for FPS World Models</p>
     <p class="authors">Anonymous Author(s)</p>
     <div class="links">
       <a class="btn btn-secondary" href="#" onclick="return false;">
@@ -397,7 +397,7 @@
     <div class="section-title">Overview</div>
     <p class="section-desc">A brief summary of the SCOPE framework and its contributions.</p>
     <div class="abstract-box">
-      We present <strong>SCOPE</strong> (Simulated Controllable Open Playable Environments), a novel framework for game AI and world modeling. SCOPE enables controllable, open-ended simulation of interactive game environments, providing a powerful testbed for developing and evaluating game AI agents. Our approach demonstrates strong performance across diverse game scenarios, enabling rich and varied gameplay behaviors that were previously difficult to achieve. We present qualitative results below showcasing the capabilities of our method.
+      The application of video world models as interactive simulators encounters significant challenges in first-person shooter (FPS) games. Such environments require spatially precise and temporally coherent visual responses to millisecond-level control inputs. Current models, typically trained on isolated games with global action conditioning, fail to capture the spatial selectivity and shared action-visual dynamics universal across the FPS genre. To overcome these limitations, we introduce <strong>CrossFPS</strong>, a large-scale multi-game dataset with frame-aligned telemetry, and present <strong>SCOPE</strong>, a framework that converts a frozen pre-trained video diffusion transformer into an interactive FPS world simulator. For generalized action control across diverse environments, this framework incorporates a spatially selective action alignment module. The module integrates continuous controls via temporal self-attention and discrete events via visually-queried cross-attention, enabling independent response determination at each spatial position based on the local visual context. Mapping visual features directly to action responses, rather than memorizing game-specific assets, facilitates zero-shot cross-game generalization. Supplemented with Action Classifier-Free Guidance for tunable control intensity, empirical evaluations across seven games confirm that a jointly trained unified model achieves high action-response fidelity, precise foreground-background separation, and effective transfer to unseen environments.
     </div>
   </section>
 
