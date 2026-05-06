@@ -437,19 +437,27 @@
 
       <!-- Sub: It Takes Two style -->
       <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">It Takes Two Style &nbsp;·&nbsp; Videos 1–2</p>
-      <div class="video-grid" id="grid-gen-itw" style="margin-bottom:28px;"></div>
+      <div class="video-grid" id="grid-gen-itw" style="margin-bottom:16px;"></div>
+      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — The crate maintains consistent appearance as the camera moves forward past it</p>
+      <div class="video-grid" id="grid-hl-itw" style="margin-bottom:28px;"></div>
 
       <!-- Sub: Genshin Impact style -->
       <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Genshin Impact Style &nbsp;·&nbsp; Videos 3–5</p>
-      <div class="video-grid" id="grid-gen-gi" style="margin-bottom:28px;"></div>
+      <div class="video-grid" id="grid-gen-gi" style="margin-bottom:16px;"></div>
+      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — The pink tree in the distance is correctly destroyed upon sustained fire</p>
+      <div class="video-grid" id="grid-hl-gi" style="margin-bottom:28px;"></div>
 
       <!-- Sub: Black Myth: Wukong style -->
       <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Black Myth: Wukong Style &nbsp;·&nbsp; Videos 6–7</p>
-      <div class="video-grid" id="grid-gen-bmw" style="margin-bottom:28px;"></div>
+      <div class="video-grid" id="grid-gen-bmw" style="margin-bottom:16px;"></div>
+      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — Muzzle flash and fire on distant structures are visibly reactive to gunfire</p>
+      <div class="video-grid" id="grid-hl-bmw" style="margin-bottom:28px;"></div>
 
       <!-- Sub: Custom Desert style -->
       <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Custom Desert Style &nbsp;·&nbsp; Video 11</p>
-      <div class="video-grid" id="grid-gen-desert" style="margin-bottom:0;"></div>
+      <div class="video-grid" id="grid-gen-desert" style="margin-bottom:16px;"></div>
+      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — Fire and hit effects on the enemy's body respond accurately to each shot</p>
+      <div class="video-grid" id="grid-hl-desert" style="margin-bottom:0;"></div>
     </div>
 
     <hr>
@@ -633,16 +641,63 @@
 
     const groups = {
       'grid-gen-itw':    [1, 2],
+      'grid-hl-itw':     ['1h'],
       'grid-gen-gi':     [3, 4, 5],
+      'grid-hl-gi':      ['3h'],
       'grid-gen-bmw':    [6, 7],
+      'grid-hl-bmw':     ['7h'],
       'grid-gen-desert': [11],
+      'grid-hl-desert':  ['11h'],
       'grid-test-mw':    [8, 9, 10],
       'grid-test-wc':    [12],
     };
 
+    function makeCardHL(id) {
+      const numId = parseInt(id);
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      card.style.borderColor = '#fed7aa';
+      card.innerHTML = `
+        <div class="video-wrap">
+          <video src="static/videos/highlight/${numId}_highlight.mp4" loop playsinline preload="metadata"></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer" style="border-top-color:#fed7aa;">
+          <div class="card-title-row">
+            <span class="sample-label">Sample ${numId} · Highlight</span>
+            <span class="sample-num" style="color:#c2410c;background:rgba(194,65,12,0.08);border-color:rgba(194,65,12,0.2);">HL</span>
+          </div>
+        </div>
+      `;
+
+      const wrap = card.querySelector('.video-wrap');
+      const video = wrap.querySelector('video');
+      const overlay = wrap.querySelector('.play-overlay');
+
+      overlay.addEventListener('click', () => {
+        document.querySelectorAll('.video-wrap video').forEach(v => {
+          if (v !== video) { v.pause(); v.closest('.video-wrap').classList.remove('playing'); }
+        });
+        if (video.paused) { video.play(); wrap.classList.add('playing'); }
+        else { video.pause(); wrap.classList.remove('playing'); }
+      });
+      video.addEventListener('click', () => { video.pause(); wrap.classList.remove('playing'); });
+      return card;
+    }
+
     Object.entries(groups).forEach(([gridId, ids]) => {
       const grid = document.getElementById(gridId);
-      ids.forEach(id => grid.appendChild(makeCard(id)));
+      ids.forEach(id => {
+        if (typeof id === 'string' && id.endsWith('h')) {
+          grid.appendChild(makeCardHL(id));
+        } else {
+          grid.appendChild(makeCard(id));
+        }
+      });
     });
   </script>
 </body>
