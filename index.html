@@ -412,7 +412,7 @@
           <div class="action-group-label">Combat · Discrete</div>
           <div class="action-pills">
             <div class="action-pill pill-fire"><span class="pill-key">RT</span><span class="pill-name">Fire</span></div>
-            <div class="action-pill pill-aim"><span class="pill-key">LT</span><span class="pill-name">ADS (Aim)</span></div>
+            <div class="action-pill pill-aim"><span class="pill-key">LT</span><span class="pill-name">ADS</span></div>
             <div class="action-pill pill-melee"><span class="pill-key">R3</span><span class="pill-name">Melee</span></div>
           </div>
         </div>
@@ -430,7 +430,7 @@
     <!-- CATEGORY 1: ZERO-SHOT GENERALIZATION -->
     <div class="category-block">
       <div class="category-header">
-        <span class="category-badge badge-generalize">🎯 Zero-shot Generalization</span>
+        <span class="category-badge badge-generalize">Zero-shot Generalization</span>
         <span class="category-title">Unseen Game Styles</span>
       </div>
       <p class="category-desc">Videos 1–8 & 11 — Games outside the training distribution. SCOPE generalizes to unseen visual styles with no fine-tuning.</p>
@@ -457,7 +457,7 @@
     <!-- CATEGORY 2: IN-DISTRIBUTION TEST -->
     <div class="category-block">
       <div class="category-header">
-        <span class="category-badge badge-test">✅ In-Distribution Test</span>
+        <span class="category-badge badge-test">In-Distribution Test</span>
         <span class="category-title">Training Game Validation</span>
       </div>
       <p class="category-desc">Videos 8–10 & 12 — Games seen during training. Evaluates action-response fidelity and visual coherence.</p>
@@ -487,7 +487,9 @@
 
     const actionSeqs = {
       1: [
-        C('Move Forward','chip-move'), C('ADS','chip-aim'), C('Fire (burst)','chip-fire'),
+        C('Move Forward','chip-move'), C('ADS','chip-aim'), C('Fire','chip-fire'),
+        ARR,
+        C('Switch Weapon','chip-weapon'),
         ARR,
         C('Move Forward','chip-move'),
       ],
@@ -500,62 +502,62 @@
         ARR,
         C('Move Forward-Right','chip-move'),
         ARR,
-        C('ADS','chip-aim'), C('Fire (auto)','chip-fire'),
+        C('ADS','chip-aim'), C('Fire','chip-fire'),
         ARR,
         C('Move Forward-Right','chip-move'),
       ],
       3: [
         C('ADS','chip-aim'), C('Move Left','chip-move'), C('Turn Left','chip-turn'),
         ARR,
-        C('Camera Stabilize','chip-turn'),
+        C('Turn Left','chip-turn'),
         ARR,
-        C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('Fire','chip-fire'), C('Jump','chip-jump'),
         ARR,
-        C('Move Left','chip-move'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('Move Left','chip-move'), C('Fire','chip-fire'), C('Jump','chip-jump'),
         ARR,
-        C('Move Left (slow)','chip-move'), C('Fire (burst)','chip-fire'),
+        C('Move Left','chip-move'), C('Fire','chip-fire'),
       ],
       4: [
         C('ADS','chip-aim'), C('Move Back-Right','chip-move'), C('Turn Right','chip-turn'),
         ARR,
-        C('Camera Stabilize','chip-turn'),
+        C('Turn Right','chip-turn'),
         ARR,
-        C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('Fire','chip-fire'), C('Jump','chip-jump'),
         ARR,
-        C('Move Back-Right','chip-move'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('Move Back-Right','chip-move'), C('Fire','chip-fire'), C('Jump','chip-jump'),
         ARR,
-        C('Move Back-Right (slow)','chip-move'), C('Fire (burst)','chip-fire'),
+        C('Move Back-Right','chip-move'), C('Fire','chip-fire'),
       ],
       5: [
         C('Move Forward','chip-move'),
         ARR,
-        C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Reload','chip-reload'),
         ARR,
         C('Turn Right','chip-turn'),
         ARR,
-        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+        C('Move Forward','chip-move'),
       ],
       6: [
         C('Move Forward','chip-move'),
         ARR,
-        C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
         ARR,
         C('Turn Right','chip-turn'),
         ARR,
-        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+        C('Move Forward','chip-move'),
       ],
       7: [
         C('Move Forward','chip-move'),
         ARR,
-        C('Switch Weapon','chip-weapon'),
+        C('Fire','chip-fire'),
         ARR,
         C('Reload','chip-reload'), C('Jump','chip-jump'),
         ARR,
-        C('Switch Weapon','chip-weapon'),
-        ARR,
         C('Turn Left','chip-turn'),
         ARR,
-        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+        C('Move Forward','chip-move'),
       ],
       8: [
         C('Move Forward','chip-move'), C('Turn Right','chip-turn'),
@@ -568,10 +570,10 @@
         C('Move Forward-Right','chip-move'),
       ],
       10: [
-        C('ADS','chip-aim'), C('Fire (auto)','chip-fire'),
+        C('ADS','chip-aim'), C('Fire','chip-fire'),
       ],
       11: [
-        C('Move Left/Right','chip-move'), C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        C('Move Left/Right','chip-move'), C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
       ],
       12: [
         C('Move Forward-Left','chip-move'),
