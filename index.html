@@ -17,11 +17,10 @@
       line-height: 1.7;
     }
 
-    /* ── HEADER ── */
     header {
       text-align: center;
-      padding: 64px 24px 40px;
-      max-width: 900px;
+      padding: 64px 40px 40px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -29,25 +28,19 @@
       height: 72px;
       width: auto;
       display: block;
-      margin: 0 auto 12px;
+      margin: 0 auto 16px;
     }
 
     .paper-title {
       font-family: 'Google Sans', sans-serif;
-      font-size: clamp(20px, 3vw, 32px);
+      font-size: clamp(22px, 2.8vw, 34px);
       font-weight: 700;
       color: #111;
-      line-height: 1.3;
+      line-height: 1.25;
       margin-bottom: 14px;
+      white-space: nowrap;
     }
-
-    .paper-venue {
-      font-family: 'Google Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: #4169e1;
-      margin-bottom: 8px;
-    }
+    @media (max-width: 900px) { .paper-title { white-space: normal; } }
 
     .paper-authors {
       font-size: 15px;
@@ -60,7 +53,6 @@
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 0;
     }
 
     .btn {
@@ -80,29 +72,21 @@
       cursor: pointer;
     }
     .btn:hover { border-color: #888; background: #f5f5f5; }
-    .btn-dark { background: #222; color: #fff; border-color: #222; }
-    .btn-dark:hover { background: #444; border-color: #444; }
 
-    /* ── DIVIDER ── */
-    hr {
-      border: none;
-      border-top: 1px solid #e8e8e8;
-      margin: 40px 0;
-    }
-
-    /* ── SECTIONS ── */
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 24px 64px;
+      padding: 0 40px 64px;
     }
+
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 40px 0; }
 
     .section-heading {
       font-family: 'Google Sans', sans-serif;
       font-size: 26px;
       font-weight: 700;
       color: #111;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
       text-align: center;
     }
 
@@ -110,22 +94,128 @@
       text-align: center;
       color: #666;
       font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    /* ── ACTION SPACE PANEL ── */
+    .action-space {
+      background: #f8f9ff;
+      border: 1px solid #e0e4f8;
+      border-radius: 14px;
+      padding: 28px 36px;
       margin-bottom: 40px;
     }
 
-    /* ── ABSTRACT ── */
-    .abstract-text {
-      font-size: 15px;
-      line-height: 1.85;
-      color: #333;
-      text-align: justify;
+    .action-space-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4169e1;
+      margin-bottom: 18px;
+      text-align: center;
     }
 
-    /* ── VIDEO CARDS ── */
+    .action-groups {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .action-group-label {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .action-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .action-pill {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-family: 'Google Sans', sans-serif;
+      border: 1px solid;
+      min-width: 72px;
+      text-align: center;
+    }
+    .pill-key  { font-size: 11px; font-weight: 700; opacity: 0.7; font-family: monospace; }
+    .pill-name { font-size: 12px; font-weight: 600; }
+
+    .pill-move   { background: #edf4ff; color: #1a56db; border-color: #bfdbfe; }
+    .pill-camera { background: #ede9fe; color: #4c1d95; border-color: #ddd6fe; }
+    .pill-fire   { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+    .pill-aim    { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+    .pill-jump   { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+    .pill-melee  { background: #ffe4e6; color: #9f1239; border-color: #fda4af; }
+    .pill-reload { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+    .pill-weapon { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
+
+    /* ── CATEGORY BLOCKS ── */
+    .category-block { margin-bottom: 48px; }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1.5px solid;
+      white-space: nowrap;
+    }
+
+    .badge-generalize {
+      background: #fff7ed;
+      color: #c2410c;
+      border-color: #fed7aa;
+    }
+
+    .badge-test {
+      background: #f0fdf4;
+      color: #166534;
+      border-color: #bbf7d0;
+    }
+
+    .category-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .category-desc {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+      padding-left: 2px;
+    }
+
+    /* ── VIDEO GRID ── */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
     }
 
     .video-card {
@@ -135,7 +225,6 @@
       background: #fafafa;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
-
     .video-card:hover {
       box-shadow: 0 8px 28px rgba(0,0,0,0.09);
       transform: translateY(-2px);
@@ -148,12 +237,7 @@
       background: #ddd;
       overflow: hidden;
     }
-
-    .video-wrap video {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .play-overlay {
       position: absolute;
@@ -165,12 +249,11 @@
       transition: opacity 0.2s;
       cursor: pointer;
     }
-
     .video-wrap.playing .play-overlay { opacity: 0; pointer-events: none; }
 
     .play-btn {
       width: 50px; height: 50px;
-      background: rgba(65, 105, 225, 0.9);
+      background: rgba(65,105,225,0.9);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -178,25 +261,16 @@
       box-shadow: 0 3px 12px rgba(65,105,225,0.35);
       transition: transform 0.18s, background 0.18s;
     }
-
-    .play-overlay:hover .play-btn {
-      transform: scale(1.1);
-      background: #4169e1;
-    }
-
+    .play-overlay:hover .play-btn { transform: scale(1.1); background: #4169e1; }
     .play-btn svg { margin-left: 3px; }
 
-    /* ── CARD INFO + ACTION SEQUENCE ── */
-    .card-footer {
-      padding: 14px 16px 16px;
-      border-top: 1px solid #eee;
-    }
+    .card-footer { padding: 13px 15px 15px; border-top: 1px solid #eee; }
 
     .card-title-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     .sample-label {
@@ -217,42 +291,45 @@
       border-radius: 100px;
     }
 
-    /* ── ACTION SEQUENCE ── */
+    /* ── ACTION SEQUENCE IN CARD ── */
     .action-seq {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 4px;
-      row-gap: 6px;
+      row-gap: 5px;
     }
 
     .action-chip {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
       font-family: 'Google Sans', sans-serif;
-      font-size: 11.5px;
-      font-weight: 500;
-      padding: 3px 9px;
-      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 5px;
       white-space: nowrap;
+      border: 1px solid;
     }
 
-    .chip-move   { background: #edf4ff; color: #1a56db; border: 1px solid #bfdbfe; }
-    .chip-aim    { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .chip-fire   { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
-    .chip-jump   { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
-    .chip-turn   { background: #ede9fe; color: #4c1d95; border: 1px solid #ddd6fe; }
-    .chip-camera { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .chip-move   { background: #edf4ff; color: #1a56db; border-color: #bfdbfe; }
+    .chip-aim    { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+    .chip-fire   { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+    .chip-jump   { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+    .chip-turn   { background: #ede9fe; color: #4c1d95; border-color: #ddd6fe; }
+    .chip-weapon { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
+    .chip-reload { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
 
-    .action-arrow {
-      color: #aaa;
-      font-size: 13px;
-      line-height: 1;
-      flex-shrink: 0;
+    .action-arrow { color: #bbb; font-size: 11px; flex-shrink: 0; }
+
+    /* ── ABSTRACT ── */
+    .abstract-text {
+      font-size: 15px;
+      line-height: 1.85;
+      color: #333;
+      text-align: justify;
     }
 
-    /* ── FOOTER ── */
     footer {
       text-align: center;
       padding: 32px 24px;
@@ -263,17 +340,16 @@
 
     @media (max-width: 640px) {
       .video-grid { grid-template-columns: 1fr; }
-      header { padding: 48px 20px 32px; }
+      header, .container { padding-left: 20px; padding-right: 20px; }
+      .action-space { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <img class="logo-img" src="static/images/scope.png" alt="SCOPE" />
-    <p class="paper-title">Simulating Cross-game Operations in Playable Environments<br>for FPS World Models</p>
-    <p class="paper-venue">Anonymous Submission</p>
+    <p class="paper-title">Simulating Cross-game Operations in Playable Environments for FPS World Models</p>
     <p class="paper-authors">Anonymous Author(s)</p>
     <div class="links">
       <a class="btn" href="#" onclick="return false;">
@@ -290,67 +366,216 @@
   <div class="container">
     <hr>
 
-    <!-- ABSTRACT -->
-    <h2 class="section-heading">Abstract</h2>
-    <p class="section-sub" style="margin-bottom:20px;"></p>
-    <p class="abstract-text">
-      The application of video world models as interactive simulators encounters significant challenges in first-person shooter (FPS) games. Such environments require spatially precise and temporally coherent visual responses to millisecond-level control inputs. Current models, typically trained on isolated games with global action conditioning, fail to capture the spatial selectivity and shared action-visual dynamics universal across the FPS genre. To overcome these limitations, we introduce <strong>CrossFPS</strong>, a large-scale multi-game dataset with frame-aligned telemetry, and present <strong>SCOPE</strong>, a framework that converts a frozen pre-trained video diffusion transformer into an interactive FPS world simulator. For generalized action control across diverse environments, this framework incorporates a spatially selective action alignment module. The module integrates continuous controls via temporal self-attention and discrete events via visually-queried cross-attention, enabling independent response determination at each spatial position based on the local visual context. Mapping visual features directly to action responses, rather than memorizing game-specific assets, facilitates zero-shot cross-game generalization. Supplemented with Action Classifier-Free Guidance for tunable control intensity, empirical evaluations across seven games confirm that a jointly trained unified model achieves high action-response fidelity, precise foreground-background separation, and effective transfer to unseen environments.
-    </p>
+    <!-- ACTION SPACE -->
+    <div class="action-space">
+      <div class="action-space-title">Action Space</div>
+      <div class="action-groups">
+        <div class="action-group">
+          <div class="action-group-label">Movement (Continuous)</div>
+          <div class="action-pills">
+            <div class="action-pill pill-move"><span class="pill-key">LX−</span><span class="pill-name">Move Left</span></div>
+            <div class="action-pill pill-move"><span class="pill-key">LX+</span><span class="pill-name">Move Right</span></div>
+            <div class="action-pill pill-move"><span class="pill-key">LY−</span><span class="pill-name">Move Forward</span></div>
+            <div class="action-pill pill-move"><span class="pill-key">LY+</span><span class="pill-name">Move Back</span></div>
+          </div>
+        </div>
+        <div class="action-group">
+          <div class="action-group-label">Camera (Continuous)</div>
+          <div class="action-pills">
+            <div class="action-pill pill-camera"><span class="pill-key">RX</span><span class="pill-name">Turn L/R</span></div>
+            <div class="action-pill pill-camera"><span class="pill-key">RY</span><span class="pill-name">Look U/D</span></div>
+          </div>
+        </div>
+        <div class="action-group">
+          <div class="action-group-label">Combat (Discrete)</div>
+          <div class="action-pills">
+            <div class="action-pill pill-fire"><span class="pill-key">RT</span><span class="pill-name">Fire</span></div>
+            <div class="action-pill pill-aim"><span class="pill-key">LT</span><span class="pill-name">ADS</span></div>
+            <div class="action-pill pill-melee"><span class="pill-key">R3</span><span class="pill-name">Melee</span></div>
+          </div>
+        </div>
+        <div class="action-group">
+          <div class="action-group-label">Utility (Discrete)</div>
+          <div class="action-pills">
+            <div class="action-pill pill-jump"><span class="pill-key">A</span><span class="pill-name">Jump</span></div>
+            <div class="action-pill pill-reload"><span class="pill-key">X</span><span class="pill-name">Reload</span></div>
+            <div class="action-pill pill-weapon"><span class="pill-key">Y</span><span class="pill-name">Switch Weapon</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORY 1: ZERO-SHOT GENERALIZATION -->
+    <div class="category-block">
+      <div class="category-header">
+        <span class="category-badge badge-generalize">🎯 Zero-shot Generalization</span>
+        <span class="category-title">Unseen Game Styles</span>
+      </div>
+      <p class="category-desc">Videos 1–8 & 11 — Games outside the training distribution. SCOPE generalizes to unseen visual styles with no fine-tuning.</p>
+
+      <!-- Sub: It Takes Two style -->
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">It Takes Two Style &nbsp;·&nbsp; Videos 1–2</p>
+      <div class="video-grid" id="grid-gen-itw" style="margin-bottom:28px;"></div>
+
+      <!-- Sub: Genshin Impact style -->
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Genshin Impact Style &nbsp;·&nbsp; Videos 3–5</p>
+      <div class="video-grid" id="grid-gen-gi" style="margin-bottom:28px;"></div>
+
+      <!-- Sub: Black Myth: Wukong style -->
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Black Myth: Wukong Style &nbsp;·&nbsp; Videos 6–7</p>
+      <div class="video-grid" id="grid-gen-bmw" style="margin-bottom:28px;"></div>
+
+      <!-- Sub: Custom Desert style -->
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Custom Desert Style &nbsp;·&nbsp; Video 11</p>
+      <div class="video-grid" id="grid-gen-desert" style="margin-bottom:0;"></div>
+    </div>
 
     <hr>
 
-    <!-- VIDEOS -->
-    <h2 class="section-heading">Generated Gameplay Samples</h2>
-    <p class="section-sub">Representative outputs from SCOPE across diverse FPS environments and action sequences.</p>
+    <!-- CATEGORY 2: IN-DISTRIBUTION TEST -->
+    <div class="category-block">
+      <div class="category-header">
+        <span class="category-badge badge-test">✅ In-Distribution Test</span>
+        <span class="category-title">Training Game Validation</span>
+      </div>
+      <p class="category-desc">Videos 8–10 & 12 — Games seen during training. Evaluates action-response fidelity and visual coherence.</p>
 
-    <div class="video-grid" id="videoGrid"></div>
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Modern Warfare &nbsp;·&nbsp; Videos 8–10</p>
+      <div class="video-grid" id="grid-test-mw" style="margin-bottom:28px;"></div>
+
+      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">WorldCam &nbsp;·&nbsp; Video 12</p>
+      <div class="video-grid" id="grid-test-wc" style="margin-bottom:0;"></div>
+    </div>
+
+    <hr>
+
+    <!-- ABSTRACT -->
+    <h2 class="section-heading">Abstract</h2>
+    <p class="abstract-text">
+      The application of video world models as interactive simulators encounters significant challenges in first-person shooter (FPS) games. Such environments require spatially precise and temporally coherent visual responses to millisecond-level control inputs. Current models, typically trained on isolated games with global action conditioning, fail to capture the spatial selectivity and shared action-visual dynamics universal across the FPS genre. To overcome these limitations, we introduce <strong>CrossFPS</strong>, a large-scale multi-game dataset with frame-aligned telemetry, and present <strong>SCOPE</strong>, a framework that converts a frozen pre-trained video diffusion transformer into an interactive FPS world simulator. For generalized action control across diverse environments, this framework incorporates a spatially selective action alignment module. The module integrates continuous controls via temporal self-attention and discrete events via visually-queried cross-attention, enabling independent response determination at each spatial position based on the local visual context. Mapping visual features directly to action responses, rather than memorizing game-specific assets, facilitates zero-shot cross-game generalization. Supplemented with Action Classifier-Free Guidance for tunable control intensity, empirical evaluations across seven games confirm that a jointly trained unified model achieves high action-response fidelity, precise foreground-background separation, and effective transfer to unseen environments.
+    </p>
   </div>
 
-  <footer>
-    Anonymous submission · For review purposes only
-  </footer>
+  <footer>Anonymous submission · For review purposes only</footer>
 
   <script>
-    // Action sequences: null = no annotation yet
+    // chip helper
+    const C = (label, cls) => ({ label, cls });
+    const ARR = { arrow: true };
+
     const actionSeqs = {
       1: [
-        { label: 'Move forward', cls: 'chip-move' },
-        { label: 'ADS + Fire', cls: 'chip-fire' },
-        { arrow: true },
-        { label: 'Turn right', cls: 'chip-turn' },
-        { arrow: true },
-        { label: 'Move forward', cls: 'chip-move' },
+        C('Move Forward','chip-move'), C('ADS','chip-aim'), C('Fire (burst)','chip-fire'),
+        ARR,
+        C('Move Forward','chip-move'),
       ],
       2: [
-        { label: 'Sprint forward-right', cls: 'chip-move' },
-        { label: 'Turn right', cls: 'chip-turn' },
-        { arrow: true },
-        { label: 'Jump', cls: 'chip-jump' },
-        { arrow: true },
-        { label: 'ADS + Burst fire', cls: 'chip-fire' },
-        { arrow: true },
-        { label: 'Move forward', cls: 'chip-move' },
+        C('Move Forward-Right','chip-move'), C('Turn Right','chip-turn'),
+        ARR,
+        C('Move Forward','chip-move'),
+        ARR,
+        C('Jump','chip-jump'),
+        ARR,
+        C('Move Forward-Right','chip-move'),
+        ARR,
+        C('ADS','chip-aim'), C('Fire (auto)','chip-fire'),
+        ARR,
+        C('Move Forward-Right','chip-move'),
+      ],
+      3: [
+        C('ADS','chip-aim'), C('Move Left','chip-move'), C('Turn Left','chip-turn'),
+        ARR,
+        C('Camera Stabilize','chip-turn'),
+        ARR,
+        C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Move Left','chip-move'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Move Left (slow)','chip-move'), C('Fire (burst)','chip-fire'),
+      ],
+      4: [
+        C('ADS','chip-aim'), C('Move Back-Right','chip-move'), C('Turn Right','chip-turn'),
+        ARR,
+        C('Camera Stabilize','chip-turn'),
+        ARR,
+        C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Move Back-Right','chip-move'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Move Back-Right (slow)','chip-move'), C('Fire (burst)','chip-fire'),
+      ],
+      5: [
+        C('Move Forward','chip-move'),
+        ARR,
+        C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Turn Right','chip-turn'),
+        ARR,
+        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+      ],
+      6: [
+        C('Move Forward','chip-move'),
+        ARR,
+        C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+        ARR,
+        C('Turn Right','chip-turn'),
+        ARR,
+        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+      ],
+      7: [
+        C('Move Forward','chip-move'),
+        ARR,
+        C('Switch Weapon','chip-weapon'),
+        ARR,
+        C('Reload','chip-reload'), C('Jump','chip-jump'),
+        ARR,
+        C('Switch Weapon','chip-weapon'),
+        ARR,
+        C('Turn Left','chip-turn'),
+        ARR,
+        C('Camera Stabilize','chip-turn'), C('Move Forward','chip-move'),
+      ],
+      8: [
+        C('Move Forward','chip-move'), C('Turn Right','chip-turn'),
+        ARR,
+        C('ADS','chip-aim'), C('Fire','chip-fire'),
+      ],
+      9: [
+        C('Move Forward','chip-move'),
+        ARR,
+        C('Move Forward-Right','chip-move'),
+      ],
+      10: [
+        C('ADS','chip-aim'), C('Fire (auto)','chip-fire'),
+      ],
+      11: [
+        C('Move Left/Right','chip-move'), C('ADS','chip-aim'), C('Fire (burst)','chip-fire'), C('Jump','chip-jump'),
+      ],
+      12: [
+        C('Move Forward-Left','chip-move'),
+        ARR,
+        C('Fire','chip-fire'),
+        ARR,
+        C('Move Forward-Right','chip-move'),
       ],
     };
 
-    function buildActionSeq(seq) {
+    function buildSeq(seq) {
       if (!seq) return '';
-      return seq.map(item => {
-        if (item.arrow) return `<span class="action-arrow">→</span>`;
-        return `<span class="action-chip ${item.cls}">${item.label}</span>`;
-      }).join('');
+      return seq.map(item =>
+        item.arrow
+          ? `<span class="action-arrow">→</span>`
+          : `<span class="action-chip ${item.cls}">${item.label}</span>`
+      ).join('');
     }
 
-    const samples = [1,2,3,4,5,6,7,8,9,10,11,12].map(i => ({ id: i, src: `static/videos/${i}.mp4` }));
-    const grid = document.getElementById('videoGrid');
-
-    samples.forEach(s => {
-      const hasActions = !!actionSeqs[s.id];
+    function makeCard(id) {
       const card = document.createElement('div');
       card.className = 'video-card';
+      const seq = actionSeqs[id];
       card.innerHTML = `
         <div class="video-wrap">
-          <video src="${s.src}" loop playsinline preload="metadata"></video>
+          <video src="static/videos/${id}.mp4" loop playsinline preload="metadata"></video>
           <div class="play-overlay">
             <div class="play-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -359,13 +584,12 @@
         </div>
         <div class="card-footer">
           <div class="card-title-row">
-            <span class="sample-label">Sample ${s.id}</span>
-            <span class="sample-num">#${String(s.id).padStart(2,'0')}</span>
+            <span class="sample-label">Sample ${id}</span>
+            <span class="sample-num">#${String(id).padStart(2,'0')}</span>
           </div>
-          ${hasActions ? `<div class="action-seq">${buildActionSeq(actionSeqs[s.id])}</div>` : ''}
+          ${seq ? `<div class="action-seq">${buildSeq(seq)}</div>` : ''}
         </div>
       `;
-      grid.appendChild(card);
 
       const wrap = card.querySelector('.video-wrap');
       const video = wrap.querySelector('video');
@@ -378,8 +602,23 @@
         if (video.paused) { video.play(); wrap.classList.add('playing'); }
         else { video.pause(); wrap.classList.remove('playing'); }
       });
-
       video.addEventListener('click', () => { video.pause(); wrap.classList.remove('playing'); });
+
+      return card;
+    }
+
+    const groups = {
+      'grid-gen-itw':    [1, 2],
+      'grid-gen-gi':     [3, 4, 5],
+      'grid-gen-bmw':    [6, 7],
+      'grid-gen-desert': [11],
+      'grid-test-mw':    [8, 9, 10],
+      'grid-test-wc':    [12],
+    };
+
+    Object.entries(groups).forEach(([gridId, ids]) => {
+      const grid = document.getElementById(gridId);
+      ids.forEach(id => grid.appendChild(makeCard(id)));
     });
   </script>
 </body>
