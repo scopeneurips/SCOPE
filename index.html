@@ -1223,6 +1223,25 @@
       font-weight: 700;
       color: #333;
     }
+
+    /* Action caption bar */
+    .action-caption-bar {
+      width: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+      padding: 4px 8px;
+      line-height: 1.4;
+      font-family: 'Google Sans', -apple-system, sans-serif;
+      min-height: 22px;
+      box-sizing: border-box;
+    }
+
+    .action-caption-bar:empty {
+      visibility: hidden;
+    }
   </style>
 </head>
 <body>
@@ -1366,7 +1385,7 @@
     <!-- Multi-Action Compositions -->
     <div class="subsection">
       <p class="subsection-title">Multi-Action Compositions</p>
-      <p class="subsection-desc">Combinations of simultaneous or sequential controls: `LT+RT`, `RT+X`, `LX/LY+RT`. These test the spatial action decoupling module's ability to handle overlapping gamepad control channels.</p>
+      <p class="subsection-desc">Combinations of simultaneous or sequential controls: <code>LT+RT</code>, <code>RT+X</code>, <code>LX/LY+RT</code>. These test the spatial action decoupling module's ability to handle overlapping gamepad control channels. <em>Note:</em> The action sequences shown below display only the discrete button events for clarity; continuous movement signals (LX/LY) that run in parallel throughout the clips are omitted from the visualization.</p>
       <div class="video-grid" id="grid-ctrl-multi"></div>
     </div>
 
@@ -1663,6 +1682,72 @@
       setButtonState(overlay, segment?.buttons || []);
     }
 
+    // ── Action caption system ──
+    const actionCaptionMap = {
+      'rt': 'Fire',
+      'lt': 'Aim',
+      'a': 'Jump',
+      'x': 'Reload',
+      'y': 'Switch',
+      'r3': 'Melee',
+    };
+
+    const stickCaptionMap = {
+      'move_x+': 'Strafe Right',
+      'move_x-': 'Strafe Left',
+      'move_y-': 'Forward',
+      'move_y+': 'Backward',
+      'camera_x+': 'Turn Right',
+      'camera_x-': 'Turn Left',
+      'camera_y+': 'Look Down',
+      'camera_y-': 'Look Up',
+    };
+
+    function buildCaptionText(segment) {
+      if (!segment) return '';
+      const parts = [];
+      // Continuous: movement
+      if (segment.move) {
+        if (segment.move.x > 0) parts.push(stickCaptionMap['move_x+']);
+        if (segment.move.x < 0) parts.push(stickCaptionMap['move_x-']);
+        if (segment.move.y < 0) parts.push(stickCaptionMap['move_y-']);
+        if (segment.move.y > 0) parts.push(stickCaptionMap['move_y+']);
+      }
+      // Continuous: camera
+      if (segment.camera) {
+        if (segment.camera.x > 0) parts.push(stickCaptionMap['camera_x+']);
+        if (segment.camera.x < 0) parts.push(stickCaptionMap['camera_x-']);
+        if (segment.camera.y > 0) parts.push(stickCaptionMap['camera_y+']);
+        if (segment.camera.y < 0) parts.push(stickCaptionMap['camera_y-']);
+      }
+      // Discrete buttons
+      if (segment.buttons) {
+        segment.buttons.forEach(btn => {
+          if (actionCaptionMap[btn]) parts.push(actionCaptionMap[btn]);
+        });
+      }
+      return parts.join(' + ');
+    }
+
+    function syncCaption(video, captionEl, track) {
+      if (!captionEl) return;
+      const segment = getTrackSegment(track, video);
+      captionEl.textContent = buildCaptionText(segment);
+    }
+
+    function attachCaption(video, wrap, trackKey) {
+      const track = actionTracks[trackKey];
+      if (!track) return;
+      const captionEl = document.createElement('div');
+      captionEl.className = 'action-caption-bar';
+      wrap.insertAdjacentElement('afterend', captionEl);
+      const refresh = () => syncCaption(video, captionEl, track);
+      ['loadedmetadata', 'timeupdate', 'play', 'pause', 'seeked', 'ended'].forEach(eventName => {
+        video.addEventListener(eventName, refresh);
+      });
+      refresh();
+    }
+
     function attachOverlay(video, wrap, trackKey) {
       const track = actionTracks[trackKey];
       if (!track) return;
@@ -1723,6 +1808,7 @@
       const footer = card.querySelector('.card-footer');
 
       attachOverlay(video, wrap, String(id));
+      attachCaption(video, wrap, String(id));
 
       footer.appendChild(buildSpeedControl(video));
 
@@ -1765,6 +1851,7 @@
       const footer = card.querySelector('.card-footer');
 
       attachOverlay(video, wrap, String(numId));
+      attachCaption(video, wrap, String(numId));
 
       footer.appendChild(buildSpeedControl(video));
 
@@ -1826,6 +1913,7 @@
       const footer = card.querySelector('.card-footer');
 
       attachOverlay(video, wrap, item.trackKey);
+      attachCaption(video, wrap, item.trackKey);
 
       footer.appendChild(buildSpeedControl(video));
 
