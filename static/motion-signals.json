@@ -1,0 +1,2048 @@
+[
+  {
+    "track_key": "1",
+    "video_path": "static/videos/1.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 3,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.3333
+        ],
+        "range_sec": [
+          0,
+          1.35
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.3333,
+          0.6667
+        ],
+        "range_sec": [
+          1.35,
+          2.7
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.6667,
+          1
+        ],
+        "range_sec": [
+          2.7,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "2",
+    "video_path": "static/videos/2.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 6,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.1667
+        ],
+        "range_sec": [
+          0,
+          0.675
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.1667,
+          0.3333
+        ],
+        "range_sec": [
+          0.675,
+          1.35
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.3333,
+          0.5
+        ],
+        "range_sec": [
+          1.35,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.5,
+          0.6667
+        ],
+        "range_sec": [
+          2.025,
+          2.7
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 4,
+        "range_ratio": [
+          0.6667,
+          0.8333
+        ],
+        "range_sec": [
+          2.7,
+          3.375
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 5,
+        "range_ratio": [
+          0.8333,
+          1
+        ],
+        "range_sec": [
+          3.375,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "3",
+    "video_path": "static/videos/3.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 5,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.2
+        ],
+        "range_sec": [
+          0,
+          0.81
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.2,
+          0.4
+        ],
+        "range_sec": [
+          0.81,
+          1.62
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.4,
+          0.6
+        ],
+        "range_sec": [
+          1.62,
+          2.43
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.6,
+          0.8
+        ],
+        "range_sec": [
+          2.43,
+          3.24
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 4,
+        "range_ratio": [
+          0.8,
+          1
+        ],
+        "range_sec": [
+          3.24,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "4",
+    "video_path": "static/videos/4.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 5,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.2
+        ],
+        "range_sec": [
+          0,
+          0.81
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.2,
+          0.4
+        ],
+        "range_sec": [
+          0.81,
+          1.62
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.4,
+          0.6
+        ],
+        "range_sec": [
+          1.62,
+          2.43
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.6,
+          0.8
+        ],
+        "range_sec": [
+          2.43,
+          3.24
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 4,
+        "range_ratio": [
+          0.8,
+          1
+        ],
+        "range_sec": [
+          3.24,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "5",
+    "video_path": "static/videos/5.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 5,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.2
+        ],
+        "range_sec": [
+          0,
+          0.81
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.2,
+          0.4
+        ],
+        "range_sec": [
+          0.81,
+          1.62
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.4,
+          0.6
+        ],
+        "range_sec": [
+          1.62,
+          2.43
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.6,
+          0.8
+        ],
+        "range_sec": [
+          2.43,
+          3.24
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 4,
+        "range_ratio": [
+          0.8,
+          1
+        ],
+        "range_sec": [
+          3.24,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "6",
+    "video_path": "static/videos/6.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 4,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.25
+        ],
+        "range_sec": [
+          0,
+          1.0125
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.25,
+          0.5
+        ],
+        "range_sec": [
+          1.0125,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.5,
+          0.75
+        ],
+        "range_sec": [
+          2.025,
+          3.0375
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.75,
+          1
+        ],
+        "range_sec": [
+          3.0375,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "7",
+    "video_path": "static/videos/7.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 5,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.2
+        ],
+        "range_sec": [
+          0,
+          0.81
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.2,
+          0.4
+        ],
+        "range_sec": [
+          0.81,
+          1.62
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.4,
+          0.6
+        ],
+        "range_sec": [
+          1.62,
+          2.43
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 3,
+        "range_ratio": [
+          0.6,
+          0.8
+        ],
+        "range_sec": [
+          2.43,
+          3.24
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 4,
+        "range_ratio": [
+          0.8,
+          1
+        ],
+        "range_sec": [
+          3.24,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "8",
+    "video_path": "static/videos/8.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "9",
+    "video_path": "static/videos/9.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "10",
+    "video_path": "static/videos/10.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 1,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          1
+        ],
+        "range_sec": [
+          0,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "11",
+    "video_path": "static/videos/11.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "12",
+    "video_path": "static/videos/12.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 3,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.3333
+        ],
+        "range_sec": [
+          0,
+          1.35
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.3333,
+          0.6667
+        ],
+        "range_sec": [
+          1.35,
+          2.7
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 2,
+        "range_ratio": [
+          0.6667,
+          1
+        ],
+        "range_sec": [
+          2.7,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 1,
+            "sign": "+",
+            "active": true
+          },
+          "ly": {
+            "axis": "LY",
+            "value": -1,
+            "sign": "-",
+            "active": true
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "ctrl_scope_fire1",
+    "video_path": "static/videos/ctrl_scope_fire1.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "ctrl_scope_fire2",
+    "video_path": "static/videos/ctrl_scope_fire2.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "track_key": "ctrl_fire_reload",
+    "video_path": "static/videos/ctrl_fire_reload.mp4",
+    "video_exists": true,
+    "duration_sec": 4.05,
+    "segment_count": 2,
+    "segments": [
+      {
+        "index": 0,
+        "range_ratio": [
+          0,
+          0.5
+        ],
+        "range_sec": [
+          0,
+          2.025
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      },
+      {
+        "index": 1,
+        "range_ratio": [
+          0.5,
+          1
+        ],
+        "range_sec": [
+          2.025,
+          4.05
+        ],
+        "move": {
+          "lx": {
+            "axis": "LX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ly": {
+            "axis": "LY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        },
+        "camera": {
+          "rx": {
+            "axis": "RX",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          },
+          "ry": {
+            "axis": "RY",
+            "value": 0,
+            "sign": "0",
+            "active": false
+          }
+        }
+      }
+    ]
+  }
+]
