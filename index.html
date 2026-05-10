@@ -13,54 +13,70 @@
       background: #fff;
       color: #222;
       font-family: 'Noto Sans', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     header {
       text-align: center;
-      padding: 64px 40px 40px;
-      max-width: 1100px;
+      padding: 72px 40px 40px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .logo-img {
-      height: 72px;
+      height: 80px;
       width: auto;
       display: block;
-      margin: 0 auto 16px;
+      margin: 0 auto 18px;
     }
 
     .paper-title {
       font-family: 'Google Sans', sans-serif;
-      font-size: clamp(22px, 2.8vw, 34px);
+      font-size: clamp(30px, 3.2vw, 42px);
       font-weight: 700;
       color: #111;
-      line-height: 1.35;
-      margin-bottom: 14px;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      text-wrap: balance;
+    }
+
+    .title-line {
+      display: block;
+    }
+
+    .title-accent {
+      display: inline-block;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 22%, #60a5fa 40%, #f59e0b 72%, #ea580c 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 18px rgba(59,130,246,0.08);
     }
 
     .paper-authors {
-      font-size: 15px;
+      font-size: 17px;
       color: #555;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .links {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 9px 20px;
+      gap: 8px;
+      padding: 10px 22px;
       border-radius: 100px;
       font-family: 'Google Sans', sans-serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 500;
       text-decoration: none;
       border: 1.5px solid #ccc;
@@ -72,27 +88,58 @@
     .btn:hover { border-color: #888; background: #f5f5f5; }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 40px 64px;
+      padding: 0 40px 72px;
     }
 
-    hr { border: none; border-top: 1px solid #e8e8e8; margin: 40px 0; }
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 48px 0; }
 
+    /* ── TL;DR ── */
+    .tldr-box {
+      background: #f7f8fc;
+      border: 1px solid #e4e7f1;
+      border-radius: 14px;
+      padding: 32px 40px;
+      margin-bottom: 8px;
+    }
+
+    .tldr-label {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4169e1;
+      margin-bottom: 14px;
+    }
+
+    .tldr-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    /* ── SECTION HEADINGS ── */
     .section-heading {
       font-family: 'Google Sans', sans-serif;
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 700;
       color: #111;
-      margin-bottom: 24px;
-      text-align: center;
+      margin-bottom: 12px;
+      text-align: left;
+      scroll-margin-top: 40px;
     }
 
-    .section-sub {
-      text-align: center;
-      color: #666;
-      font-size: 15px;
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
       margin-bottom: 32px;
+    }
+
+    .tldr-box {
+      scroll-margin-top: 40px;
     }
 
     /* ── ACTION SPACE PANEL ── */
@@ -100,15 +147,15 @@
       background: #f8f9ff;
       border: 1px solid #e0e4f8;
       border-radius: 14px;
-      padding: 32px 40px;
-      margin-bottom: 40px;
+      padding: 36px 44px;
+      margin-bottom: 8px;
     }
 
     .action-space-title {
       font-family: 'Google Sans', sans-serif;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #4169e1;
       margin-bottom: 24px;
@@ -125,22 +172,23 @@
     }
 
     .action-group {
-      padding: 18px 20px;
+      padding: 20px 22px;
       border-right: 1px solid #dde2f5;
     }
     .action-group:last-child { border-right: none; }
 
     .action-group-label {
       font-family: 'Google Sans', sans-serif;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       color: #4169e1;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       margin-bottom: 14px;
-      padding-bottom: 10px;
+      padding-bottom: 12px;
       border-bottom: 1px solid #dde2f5;
-      white-space: nowrap;
+      white-space: normal;
+      line-height: 1.45;
       text-align: center;
     }
 
@@ -150,21 +198,193 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 7px 12px;
-      border-radius: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
       font-family: 'Google Sans', sans-serif;
       border: 1px solid;
       width: 100%;
+      min-width: 0;
     }
     .pill-key {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 700;
       font-family: monospace;
-      min-width: 32px;
+      min-width: 36px;
       text-align: center;
-      opacity: 0.75;
+      opacity: 0.8;
     }
-    .pill-name { font-size: 12px; font-weight: 600; }
+    .pill-name { font-size: 14px; font-weight: 600; }
+
+    .action-pill.visual-pill {
+      gap: 12px;
+      padding: 9px 12px;
+    }
+
+    .pill-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .pill-subkey {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      opacity: 0.66;
+    }
+
+    .mini-stick {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 45%, rgba(255,255,255,0.12), rgba(9,14,24,0.18));
+      box-shadow: inset 0 0 0 1px rgba(228,235,250,0.1), inset 0 -10px 14px rgba(6,11,22,0.22);
+    }
+
+    .mini-stick::before,
+    .mini-stick::after {
+      content: '';
+      position: absolute;
+      background: rgba(232,238,252,0.16);
+      border-radius: 999px;
+    }
+
+    .mini-stick::before {
+      top: 50%;
+      left: 5px;
+      right: 5px;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    .mini-stick::after {
+      left: 50%;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      transform: translateX(-50%);
+    }
+
+    .mini-stick-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.22), inset 0 1px 1px rgba(255,255,255,0.22);
+    }
+
+    .mini-stick.move .mini-stick-dot {
+      background: radial-gradient(circle at 35% 35%, #f8fbff, #8ec5ff 56%, #3b82f6 78%, #1d4ed8);
+    }
+
+    .mini-stick.camera .mini-stick-dot {
+      background: radial-gradient(circle at 35% 35%, #faf5ff, #d8b4fe 56%, #a855f7 78%, #6d28d9);
+    }
+
+    .mini-stick.dir-left .mini-stick-dot { transform: translate(calc(-50% - 6px), -50%); }
+    .mini-stick.dir-right .mini-stick-dot { transform: translate(calc(-50% + 6px), -50%); }
+    .mini-stick.dir-up .mini-stick-dot { transform: translate(-50%, calc(-50% - 6px)); }
+    .mini-stick.dir-down .mini-stick-dot { transform: translate(-50%, calc(-50% + 6px)); }
+
+    .mini-trigger {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 18px;
+      flex: 0 0 34px;
+      border: 1px solid rgba(212,222,242,0.18);
+      border-radius: 10px 10px 7px 7px;
+      background: linear-gradient(180deg, rgba(17,24,39,0.68), rgba(17,24,39,0.24));
+      color: rgba(246,248,255,0.84);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 4px 12px rgba(4,8,18,0.1);
+    }
+
+    .mini-trigger::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: -3px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
+    }
+
+    .pill-icon {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+
+    .pill-icon::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      height: 60%;
+      background: rgba(0,0,0,0.12);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+
+    .pill-glyph {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .pill-icon-jump { background: #18b2ca; }
+    .pill-icon-reload { background: #7d58a8; }
+    .pill-icon-switch { background: #df5a32; }
+    .pill-icon-melee { background: #339c00; }
+
+    .pill-glyph-triangle {
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 16px solid #f3f4f6;
+      transform: translate(-50%, -56%);
+    }
+
+    .pill-glyph-reload {
+      width: 10px;
+      height: 20px;
+      background: #f3f4f6;
+      border-radius: 1px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .pill-glyph-square {
+      width: 16px;
+      height: 16px;
+      background: #f3f4f6;
+    }
+
+    .pill-glyph-circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #f3f4f6;
+    }
 
     .pill-move   { background: #edf4ff; color: #1a56db; border-color: #bfdbfe; }
     .pill-camera { background: #ede9fe; color: #4c1d95; border-color: #ddd6fe; }
@@ -182,62 +402,142 @@
       .action-group:nth-child(2) { border-bottom: 1px solid #dde2f5; }
     }
 
-    /* ── CATEGORY BLOCKS ── */
-    .category-block { margin-bottom: 48px; }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 8px;
+    .action-space {
+      max-width: 820px;
+      margin: 0 auto 8px;
+      padding: 20px 22px;
     }
 
-    .category-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'Google Sans', sans-serif;
+    .action-space-title {
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
-      border: 1.5px solid;
+      letter-spacing: 0.07em;
+      margin-bottom: 14px;
+    }
+
+    .action-groups {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      border: none;
+      border-radius: 0;
+      overflow: visible;
+      align-items: start;
+    }
+
+    .action-group {
+      padding: 13px 14px 12px;
+      border: 1px solid #dde2f5;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.86);
+    }
+
+    .action-group:last-child {
+      border-right: 1px solid #dde2f5;
+    }
+
+    .action-group-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2e7f7;
+    }
+
+    .action-group-label {
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-align: left;
       white-space: nowrap;
     }
 
-    .badge-generalize {
-      background: #fff7ed;
-      color: #c2410c;
-      border-color: #fed7aa;
+    .action-pills {
+      gap: 4px;
     }
 
-    .badge-test {
-      background: #f0fdf4;
-      color: #166534;
-      border-color: #bbf7d0;
+    .action-row {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(221,226,245,0.72);
     }
 
-    .category-title {
-      font-family: 'Google Sans', sans-serif;
-      font-size: 18px;
+    .action-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .action-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
       font-weight: 700;
-      color: #111;
+      letter-spacing: 0.02em;
+      color: #27457e;
     }
 
-    .category-desc {
-      font-size: 14px;
-      color: #777;
-      margin-bottom: 20px;
-      padding-left: 2px;
+    .action-desc-line {
+      min-width: 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1f2a44;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 700px) {
+      .action-space {
+        padding: 16px 14px;
+      }
+
+      .action-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .action-group {
+        padding: 14px;
+      }
+
+      .action-group-head {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+      }
+
+      .action-row {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 8px;
+      }
+    }
+
+    /* ── SUBSECTION ── */
+    .subsection {
+      margin-bottom: 40px;
+    }
+
+    .subsection-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .subsection-desc {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.7;
     }
 
     /* ── VIDEO GRID ── */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
     }
 
     .video-card {
@@ -261,6 +561,273 @@
     }
     .video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+    .control-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 16px 12px 10px;
+      color: #fff;
+      font-family: 'Google Sans', sans-serif;
+      --overlay-green: rgba(92,255,173,0.96);
+      --overlay-idle-fill: rgba(14,21,34,0.18);
+      --overlay-idle-edge: rgba(233,240,252,0.12);
+      --overlay-idle-core: rgba(244,247,255,0.84);
+    }
+
+    .overlay-row {
+      width: min(100%, 320px);
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr) 40px;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2px;
+    }
+
+    .overlay-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay-column-center {
+      min-width: 0;
+    }
+
+    .face-row {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .trigger-pill,
+    .face-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      border: 1px solid var(--overlay-idle-edge);
+      background: linear-gradient(180deg, rgba(19,27,43,0.18), rgba(10,15,27,0.08));
+      color: rgba(246,248,255,0.72);
+      opacity: 0.22;
+      transition: opacity 0.16s ease, background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease, color 0.16s ease;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 3px 10px rgba(4,8,18,0.05);
+      overflow: hidden;
+    }
+
+    .trigger-pill {
+      width: 30px;
+      height: 18px;
+      border-radius: 9px 9px 6px 6px;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .trigger-pill::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: -3px;
+      height: 5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      opacity: 0.34;
+    }
+
+    .face-button {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+    }
+
+    .trigger-pill.active,
+    .face-button.active {
+      opacity: 1;
+      transform: translateY(-1px);
+      background: linear-gradient(180deg, rgba(57,215,138,0.5), rgba(16,98,61,0.34));
+      border-color: rgba(92,255,173,0.72);
+      color: rgba(247,255,251,0.96);
+      box-shadow: 0 0 16px rgba(57,215,138,0.24), inset 0 1px 0 rgba(220,255,236,0.24);
+    }
+
+    .stick-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stick-base {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(232,239,252,0.1);
+      background: radial-gradient(circle at 50% 45%, rgba(255,255,255,0.08), rgba(9,14,24,0.16));
+      box-shadow: inset 0 0 0 1px rgba(228,235,250,0.05), inset 0 -10px 14px rgba(6,11,22,0.18);
+      opacity: 0.26;
+      transition: opacity 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+
+    .stick-base.active {
+      opacity: 1;
+      border-color: rgba(92,255,173,0.68);
+      background: radial-gradient(circle at 50% 45%, rgba(57,215,138,0.24), rgba(11,34,23,0.22));
+      box-shadow: 0 0 16px rgba(57,215,138,0.22), inset 0 0 0 1px rgba(92,255,173,0.14), inset 0 -10px 14px rgba(6,24,15,0.22);
+    }
+
+    .stick-axis {
+      position: absolute;
+      background: rgba(232,238,252,0.16);
+      border-radius: 999px;
+    }
+
+    .stick-axis-x {
+      top: 50%;
+      left: 8px;
+      right: 8px;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    .stick-axis-y {
+      left: 50%;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      transform: translateX(-50%);
+    }
+
+    .stick-knob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.98), rgba(221,230,246,0.8) 56%, rgba(186,199,220,0.72));
+      transition: transform 0.14s ease, box-shadow 0.16s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18), inset 0 1px 2px rgba(255,255,255,0.22);
+    }
+
+    .face-glyph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .face-glyph-triangle {
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 7px solid rgba(243,244,246,0.92);
+      transform: translate(-50%, -56%);
+    }
+
+    .face-glyph-reload {
+      width: 3px;
+      height: 8px;
+      background: rgba(243,244,246,0.92);
+      border-radius: 1px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .face-glyph-square {
+      width: 6px;
+      height: 6px;
+      background: rgba(243,244,246,0.92);
+    }
+
+    .face-glyph-circle {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(243,244,246,0.92);
+    }
+
+    @media (max-width: 640px) {
+      .control-overlay {
+        padding: 12px 8px 8px;
+      }
+
+      .overlay-row {
+        width: min(100%, 272px);
+        grid-template-columns: 34px minmax(0, 1fr) 34px;
+        gap: 7px;
+      }
+
+      .face-row {
+        gap: 4px;
+      }
+
+      .trigger-pill {
+        width: 26px;
+        height: 17px;
+        font-size: 6px;
+      }
+
+      .face-button {
+        width: 16px;
+        height: 16px;
+      }
+
+      .stick-base {
+        width: 34px;
+        height: 34px;
+      }
+
+      .stick-axis-x {
+        left: 7px;
+        right: 7px;
+      }
+
+      .stick-axis-y {
+        top: 7px;
+        bottom: 7px;
+      }
+
+      .stick-knob {
+        width: 13px;
+        height: 13px;
+      }
+
+      .face-glyph-triangle {
+        border-left-width: 3px;
+        border-right-width: 3px;
+        border-bottom-width: 6px;
+      }
+
+      .face-glyph-reload {
+        width: 3px;
+        height: 7px;
+      }
+
+      .face-glyph-square {
+        width: 5px;
+        height: 5px;
+      }
+
+      .face-glyph-circle {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
     .play-overlay {
       position: absolute;
       inset: 0;
@@ -274,7 +841,7 @@
     .video-wrap.playing .play-overlay { opacity: 0; pointer-events: none; }
 
     .play-btn {
-      width: 50px; height: 50px;
+      width: 54px; height: 54px;
       background: rgba(65,105,225,0.9);
       border-radius: 50%;
       display: flex;
@@ -286,30 +853,30 @@
     .play-overlay:hover .play-btn { transform: scale(1.1); background: #4169e1; }
     .play-btn svg { margin-left: 3px; }
 
-    .card-footer { padding: 13px 15px 15px; border-top: 1px solid #eee; }
+    .card-footer { padding: 14px 16px 16px; border-top: 1px solid #eee; }
 
     .card-title-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 9px;
+      margin-bottom: 10px;
     }
 
     .sample-label {
       font-family: 'Google Sans', sans-serif;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 600;
       color: #222;
     }
 
     .sample-num {
       font-family: 'Google Sans', sans-serif;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: #4169e1;
       background: rgba(65,105,225,0.08);
       border: 1px solid rgba(65,105,225,0.18);
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 100px;
     }
 
@@ -318,20 +885,60 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 4px;
-      row-gap: 5px;
+      gap: 5px;
+      row-gap: 6px;
     }
 
     .action-chip {
       display: inline-flex;
       align-items: center;
       font-family: 'Google Sans', sans-serif;
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 600;
-      padding: 2px 7px;
+      padding: 3px 9px;
       border-radius: 5px;
       white-space: nowrap;
       border: 1px solid;
+    }
+
+    .action-chip.visual-chip {
+      gap: 7px;
+      padding: 4px 8px 4px 6px;
+    }
+
+    .action-chip.visual-chip .pill-icon {
+      width: 18px;
+      height: 18px;
+      flex-basis: 18px;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.16);
+    }
+
+    .action-chip.visual-chip .pill-glyph-triangle {
+      border-left-width: 5px;
+      border-right-width: 5px;
+      border-bottom-width: 8px;
+    }
+
+    .action-chip.visual-chip .pill-glyph-reload {
+      width: 5px;
+      height: 10px;
+    }
+
+    .action-chip.visual-chip .pill-glyph-square {
+      width: 9px;
+      height: 9px;
+    }
+
+    .action-chip.visual-chip .pill-glyph-circle {
+      width: 10px;
+      height: 10px;
+    }
+
+    .action-chip-label.token {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
     }
 
     .chip-move   { background: #edf4ff; color: #1a56db; border-color: #bfdbfe; }
@@ -342,263 +949,750 @@
     .chip-weapon { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
     .chip-reload { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
 
-    .action-arrow { color: #bbb; font-size: 11px; flex-shrink: 0; }
+    .action-arrow { color: #bbb; font-size: 12px; flex-shrink: 0; }
 
-    /* ── ABSTRACT ── */
-    .abstract-text {
-      font-size: 15px;
-      line-height: 1.85;
-      color: #333;
-      text-align: justify;
+    /* ── SPEED CONTROL ── */
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #e8e8e8;
+    }
+
+    .speed-label {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #888;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .speed-btn {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .speed-btn:hover {
+      border-color: #4169e1;
+      color: #4169e1;
+      background: rgba(65,105,225,0.04);
+    }
+    .speed-btn.active {
+      background: rgba(65,105,225,0.1);
+      border-color: #4169e1;
+      color: #4169e1;
+    }
+
+    /* ── HIGHLIGHT CARD ── */
+    .video-card.highlight-card {
+      border-color: #fed7aa;
+    }
+    .video-card.highlight-card .card-footer {
+      border-top-color: #fed7aa;
+    }
+
+    /* ── COMPARISON SECTION ── */
+    .compare-case {
+      margin-bottom: 48px;
+    }
+
+    .compare-case-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #444;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .compare-cell {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e2e2e8;
+      background: #111;
+    }
+
+    .compare-cell video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .compare-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: #fff;
+      z-index: 2;
+    }
+    .label-ours { background: rgba(65,105,225,0.88); }
+    .label-baseline { background: rgba(80,80,80,0.78); }
+
+    .compare-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .compare-play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1.5px solid #4169e1;
+      background: #4169e1;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+    .compare-play-btn:hover { background: #3358c4; border-color: #3358c4; }
+    .compare-play-btn.playing { background: #dc2626; border-color: #dc2626; }
+    .compare-play-btn.playing:hover { background: #b91c1c; border-color: #b91c1c; }
+
+    .compare-speed {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .compare-speed .speed-label {
+      font-size: 13px;
+    }
+
+    .compare-speed .speed-btn {
+      font-size: 13px;
+      padding: 5px 12px;
+    }
+
+    @media (max-width: 900px) {
+      .compare-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .compare-row { grid-template-columns: 1fr; }
     }
 
     footer {
       text-align: center;
-      padding: 32px 24px;
+      padding: 36px 24px;
       border-top: 1px solid #eee;
       color: #aaa;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     @media (max-width: 640px) {
       .video-grid { grid-template-columns: 1fr; }
       header, .container { padding-left: 20px; padding-right: 20px; }
-      .action-space { padding: 20px; }
+      .action-space { padding: 24px; }
+      .tldr-box { padding: 24px; }
+    }
+
+    /* ── SIDEBAR NAVIGATION ── */
+    .side-nav {
+      position: fixed;
+      top: 50%;
+      left: 24px;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid #e8e8ee;
+      border-radius: 12px;
+      padding: 14px 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      max-width: 200px;
+    }
+
+    .side-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #666;
+      transition: all 0.18s;
+      line-height: 1.3;
+    }
+
+    .side-nav a:hover {
+      background: #f0f2ff;
+      color: #4169e1;
+    }
+
+    .side-nav a.active {
+      background: rgba(65,105,225,0.08);
+      color: #4169e1;
+      font-weight: 700;
+    }
+
+    .side-nav .nav-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ccc;
+      flex-shrink: 0;
+      transition: background 0.18s, transform 0.18s;
+    }
+
+    .side-nav a.active .nav-dot {
+      background: #4169e1;
+      transform: scale(1.3);
+    }
+
+    .side-nav a:hover .nav-dot {
+      background: #4169e1;
+    }
+
+    @media (max-width: 1440px) {
+      .side-nav {
+        left: 12px;
+        padding: 10px 8px;
+        max-width: 170px;
+      }
+      .side-nav a {
+        font-size: 11.5px;
+        padding: 6px 10px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .side-nav { display: none; }
+    }
+
+    /* Figures */
+    .paper-figure {
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .paper-figure img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .paper-figure .figure-caption {
+      margin-top: 12px;
+      font-size: 13.5px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .paper-figure .figure-caption .fig-label {
+      font-weight: 700;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
+  <!-- SIDEBAR NAVIGATION -->
+  <nav class="side-nav" id="sideNav">
+    <a href="#sec-tldr" data-section="sec-tldr">
+      <span class="nav-dot"></span>TL;DR
+    </a>
+    <a href="#sec-method" data-section="sec-method">
+      <span class="nav-dot"></span>Method
+    </a>
+    <a href="#sec-action-space" data-section="sec-action-space">
+      <span class="nav-dot"></span>Action Space
+    </a>
+    <a href="#sec-controllability" data-section="sec-controllability">
+      <span class="nav-dot"></span>Controllability
+    </a>
+    <a href="#sec-generalization" data-section="sec-generalization">
+      <span class="nav-dot"></span>Generalization
+    </a>
+    <a href="#sec-indistribution" data-section="sec-indistribution">
+      <span class="nav-dot"></span>In-Distribution
+    </a>
+    <a href="#sec-comparison" data-section="sec-comparison">
+      <span class="nav-dot"></span>Comparison
+    </a>
+  </nav>
+
   <header>
     <img class="logo-img" src="static/images/scope.png" alt="SCOPE" />
-    <p class="paper-title">Simulating Cross-game Operations in Playable Environments<br>for FPS World Models</p>
+    <p class="paper-title">
+      <span class="title-line"><span class="title-accent">S</span>imulating <span class="title-accent">C</span>ross-game <span class="title-accent">O</span>perations in</span>
+      <span class="title-line"><span class="title-accent">P</span>layable <span class="title-accent">E</span>nvironments for FPS World Models</span>
+    </p>
     <p class="paper-authors">Anonymous Author(s)</p>
     <div class="links">
       <a class="btn" href="#" onclick="return false;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
         Paper (Coming Soon)
       </a>
       <a class="btn" href="#" onclick="return false;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
         Code (Coming Soon)
       </a>
     </div>
   </header>
 
   <div class="container">
+
+    <!-- TL;DR -->
+    <div class="tldr-box" id="sec-tldr">
+      <div class="tldr-label">TL;DR</div>
+      <p class="tldr-text">
+        <strong>SCOPE</strong> extends a pre-trained video diffusion transformer into an interactive FPS world simulator through end-to-end joint training on <strong>CrossFPS</strong>&mdash;an action-annotated multi-game dataset without human bias spanning seven titles. It incorporates a <em>spatial action decoupling module</em> that enables each spatial position to independently determine its visual response based on local context. By mapping visual features to action responses rather than memorizing game-specific assets, SCOPE achieves <em>zero-shot generalization</em> to unseen first-person environments with robust action responsiveness under high-frequency, high-intensity control signals.
+      </p>
+    </div>
+
     <hr>
 
-    <!-- ACTION SPACE -->
+    <!-- SECTION: METHOD -->
+    <h2 class="section-heading" id="sec-method">Method</h2>
+    <p class="section-desc">
+      SCOPE inserts a lightweight <em>spatial action decoupling module</em> into each DiT block of a pretrained video diffusion transformer. The module reshapes visual tokens into per-pixel temporal sequences and routes actions through dual pathways: <strong>discrete events</strong> (fire, reload, etc.) use cross-attention with visual queries to confine effects to in-scope regions, while <strong>continuous controls</strong> (camera, movement) use MLP fusion and temporal self-attention for smooth out-of-scope ego-motion. All output projections are zero-initialized so training begins from the unmodified video generator.
+    </p>
+
+    <div class="paper-figure">
+      <img src="static/method.svg" alt="SCOPE architecture diagram">
+      <p class="figure-caption"><span class="fig-label">Figure 1.</span> SCOPE architecture. A SCOPE module is inserted into each DiT block. Discrete inputs use cross-attention with visual queries to confine effects to in-scope regions. Continuous inputs use MLP fusion and temporal self-attention for out-of-scope generation. Pathways combine via residual connections.</p>
+    </div>
+
+    <p class="section-desc">
+      The model is trained end-to-end on <strong>CrossFPS</strong>&mdash;a multi-game action-annotated dataset spanning seven FPS titles (69K clips) with frame-aligned 10-DoF gamepad telemetry captured without human bias. Stochastic action dropout during training enables Action Classifier-Free Guidance (Action-CFG) at inference for tunable action intensity.
+    </p>
+
+    <div class="paper-figure">
+      <img src="static/dataset.svg" alt="CrossFPS dataset overview">
+      <p class="figure-caption"><span class="fig-label">Figure 2.</span> CrossFPS overview. Clip distribution across seven FPS titles (69K total) with frame-aligned 10-DoF gamepad telemetry.</p>
+    </div>
+
+    <hr>
+
+    <!-- SECTION 1: ACTION SPACE -->
+    <h2 class="section-heading" id="sec-action-space">1. Action Space</h2>
+    <p class="section-desc">
+      SCOPE uses a <strong>Gamepad 10-DoF action interface</strong> with four functional groups: two continuous axes for movement, two continuous axes for camera control, three discrete combat buttons, and three discrete utility buttons. The telemetry format below matches the action supervision and overlay visualization used throughout the demos.
+    </p>
+
     <div class="action-space">
-      <div class="action-space-title">Action Space</div>
+      <div class="action-space-title">Action Telemetry Format &middot; 10 Dimensions in 4 Groups</div>
       <div class="action-groups">
         <div class="action-group">
-          <div class="action-group-label">Movement · Continuous</div>
+          <div class="action-group-head">
+            <div class="action-group-label">Movement: LX / LY</div>
+          </div>
           <div class="action-pills">
-            <div class="action-pill pill-move"><span class="pill-key">LX−</span><span class="pill-name">Move Left</span></div>
-            <div class="action-pill pill-move"><span class="pill-key">LX+</span><span class="pill-name">Move Right</span></div>
-            <div class="action-pill pill-move"><span class="pill-key">LY−</span><span class="pill-name">Move Forward</span></div>
-            <div class="action-pill pill-move"><span class="pill-key">LY+</span><span class="pill-name">Move Back</span></div>
+            <div class="action-row"><span class="action-code">LX</span><span class="action-desc-line">Move left / right</span></div>
+            <div class="action-row"><span class="action-code">LY</span><span class="action-desc-line">Move forward / back</span></div>
           </div>
         </div>
         <div class="action-group">
-          <div class="action-group-label">Camera · Continuous</div>
+          <div class="action-group-head">
+            <div class="action-group-label">Camera: RX / RY</div>
+          </div>
           <div class="action-pills">
-            <div class="action-pill pill-camera"><span class="pill-key">RX</span><span class="pill-name">Turn Left / Right</span></div>
-            <div class="action-pill pill-camera"><span class="pill-key">RY</span><span class="pill-name">Look Up / Down</span></div>
+            <div class="action-row"><span class="action-code">RX</span><span class="action-desc-line">Turn left / right</span></div>
+            <div class="action-row"><span class="action-code">RY</span><span class="action-desc-line">Look up / down</span></div>
           </div>
         </div>
         <div class="action-group">
-          <div class="action-group-label">Combat · Discrete</div>
+          <div class="action-group-head">
+            <div class="action-group-label">Combat: LT / RT / R3</div>
+          </div>
           <div class="action-pills">
-            <div class="action-pill pill-fire"><span class="pill-key">RT</span><span class="pill-name">Fire</span></div>
-            <div class="action-pill pill-aim"><span class="pill-key">LT</span><span class="pill-name">ADS</span></div>
-            <div class="action-pill pill-melee"><span class="pill-key">R3</span><span class="pill-name">Melee</span></div>
+            <div class="action-row"><span class="action-code">RT</span><span class="action-desc-line">Fire</span></div>
+            <div class="action-row"><span class="action-code">LT</span><span class="action-desc-line">Aim down sights (ADS)</span></div>
+            <div class="action-row"><span class="action-code">R3</span><span class="action-desc-line">Melee</span></div>
           </div>
         </div>
         <div class="action-group">
-          <div class="action-group-label">Utility · Discrete</div>
+          <div class="action-group-head">
+            <div class="action-group-label">Utility: A / X / Y</div>
+          </div>
           <div class="action-pills">
-            <div class="action-pill pill-jump"><span class="pill-key">A</span><span class="pill-name">Jump</span></div>
-            <div class="action-pill pill-reload"><span class="pill-key">X</span><span class="pill-name">Reload</span></div>
-            <div class="action-pill pill-weapon"><span class="pill-key">Y</span><span class="pill-name">Switch Weapon</span></div>
+            <div class="action-row"><span class="action-code">A</span><span class="action-desc-line">Jump</span></div>
+            <div class="action-row"><span class="action-code">X</span><span class="action-desc-line">Reload</span></div>
+            <div class="action-row"><span class="action-code">Y</span><span class="action-desc-line">Switch weapon</span></div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- CATEGORY 1: ZERO-SHOT GENERALIZATION -->
-    <div class="category-block">
-      <div class="category-header">
-        <span class="category-badge badge-generalize">Zero-shot Generalization</span>
-        <span class="category-title">Unseen Game Styles</span>
-      </div>
-      <p class="category-desc">Videos 1–8 & 11 — Games outside the training distribution. SCOPE generalizes to unseen visual styles with no fine-tuning.</p>
-
-      <!-- Sub: It Takes Two style -->
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">It Takes Two Style &nbsp;·&nbsp; Videos 1–2</p>
-      <div class="video-grid" id="grid-gen-itw" style="margin-bottom:16px;"></div>
-      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — The crate maintains consistent appearance as the camera moves forward past it</p>
-      <div class="video-grid" id="grid-hl-itw" style="margin-bottom:28px;"></div>
-
-      <!-- Sub: Genshin Impact style -->
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Genshin Impact Style &nbsp;·&nbsp; Videos 3–5</p>
-      <div class="video-grid" id="grid-gen-gi" style="margin-bottom:16px;"></div>
-      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — The pink tree in the distance is correctly destroyed upon sustained fire</p>
-      <div class="video-grid" id="grid-hl-gi" style="margin-bottom:28px;"></div>
-
-      <!-- Sub: Black Myth: Wukong style -->
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Black Myth: Wukong Style &nbsp;·&nbsp; Videos 6–7</p>
-      <div class="video-grid" id="grid-gen-bmw" style="margin-bottom:16px;"></div>
-      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — Muzzle flash and fire on distant structures are visibly reactive to gunfire</p>
-      <div class="video-grid" id="grid-hl-bmw" style="margin-bottom:28px;"></div>
-
-      <!-- Sub: Custom Desert style -->
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Custom Desert Style &nbsp;·&nbsp; Video 11</p>
-      <div class="video-grid" id="grid-gen-desert" style="margin-bottom:16px;"></div>
-      <p style="font-family:'Google Sans',sans-serif;font-size:12px;font-weight:600;color:#c2410c;margin-bottom:10px;padding-left:2px;">✦ Highlight — Fire and hit effects on the enemy's body respond accurately to each shot</p>
-      <div class="video-grid" id="grid-hl-desert" style="margin-bottom:0;"></div>
     </div>
 
     <hr>
 
-    <!-- CATEGORY 2: IN-DISTRIBUTION TEST -->
-    <div class="category-block">
-      <div class="category-header">
-        <span class="category-badge badge-test">In-Distribution Test</span>
-        <span class="category-title">Training Game Validation</span>
-      </div>
-      <p class="category-desc">Videos 8–10 & 12 — Games seen during training. Evaluates action-response fidelity and visual coherence.</p>
-
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">Modern Warfare &nbsp;·&nbsp; Videos 8–10</p>
-      <div class="video-grid" id="grid-test-mw" style="margin-bottom:28px;"></div>
-
-      <p style="font-family:'Google Sans',sans-serif;font-size:13px;font-weight:700;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.07em;">WorldCam &nbsp;·&nbsp; Video 12</p>
-      <div class="video-grid" id="grid-test-wc" style="margin-bottom:0;"></div>
-    </div>
-
-    <hr>
-
-    <!-- ABSTRACT -->
-    <h2 class="section-heading">Abstract</h2>
-    <p class="abstract-text">
-      The application of video world models as interactive simulators encounters significant challenges in first-person shooter (FPS) games. Such environments require spatially precise and temporally coherent visual responses to millisecond-level control inputs. Current models, typically trained on isolated games with global action conditioning, fail to capture the spatial selectivity and shared action-visual dynamics universal across the FPS genre. To overcome these limitations, we introduce <strong>CrossFPS</strong>, a large-scale multi-game dataset with frame-aligned telemetry, and present <strong>SCOPE</strong>, a framework that converts a frozen pre-trained video diffusion transformer into an interactive FPS world simulator. For generalized action control across diverse environments, this framework incorporates a spatially selective action alignment module. The module integrates continuous controls via temporal self-attention and discrete events via visually-queried cross-attention, enabling independent response determination at each spatial position based on the local visual context. Mapping visual features directly to action responses, rather than memorizing game-specific assets, facilitates zero-shot cross-game generalization. Supplemented with Action Classifier-Free Guidance for tunable control intensity, empirical evaluations across seven games confirm that a jointly trained unified model achieves high action-response fidelity, precise foreground-background separation, and effective transfer to unseen environments.
+    <!-- SECTION 2: ACTION CONTROLLABILITY IN UNSEEN SCENES -->
+    <h2 class="section-heading" id="sec-controllability">2. Action Controllability in Unseen Scenes</h2>
+    <p class="section-desc">
+      A central claim of SCOPE is that mapping visual features to action responses&mdash;rather than memorizing game-specific assets&mdash;enables effective transfer to unseen scenes. We evaluate on first-person frames synthesized by GPT-image-2 spanning game aesthetics entirely absent from training, focusing on multi-action compositions that test the spatial action decoupling module under concurrent gamepad inputs.
     </p>
+
+    <!-- Multi-Action Compositions -->
+    <div class="subsection">
+      <p class="subsection-title">Multi-Action Compositions</p>
+      <p class="subsection-desc">Combinations of simultaneous or sequential controls: `LT+RT`, `RT+X`, `LX/LY+RT`. These test the spatial action decoupling module's ability to handle overlapping gamepad control channels.</p>
+      <div class="video-grid" id="grid-ctrl-multi"></div>
+    </div>
+
+    <hr>
+
+    <!-- SECTION 3: ZERO-SHOT VISUAL GENERALIZATION -->
+    <h2 class="section-heading" id="sec-generalization">3. Zero-Shot Visual Generalization</h2>
+    <p class="section-desc">
+      Despite training exclusively on FPS gameplay data from seven titles, SCOPE generalizes to drastically different visual styles&mdash;from cartoon to anime to photorealistic&mdash;without any fine-tuning. Each video below is generated from a single context frame in an unseen environment. Highlight clips (orange border) are 12-frame excerpts that isolate <em>action-environment interactions</em>&mdash;the most challenging evaluation axis&mdash;within each style.
+    </p>
+
+    <div class="subsection">
+      <p class="subsection-title">It Takes Two &mdash; Cartoon Style</p>
+      <div class="video-grid" id="grid-gen-itw"></div>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">Genshin Impact &mdash; Anime Style</p>
+      <p class="subsection-desc">Sample 3 &middot; Highlight is a 12-frame excerpt demonstrating <strong>Object Interaction</strong>&mdash;<code>RT</code> applied to objects produces localized deformation, particle effects, and physics responses, requiring geometric transformation beyond texture synthesis.</p>
+      <div class="video-grid" id="grid-gen-gi"></div>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">Black Myth: Wukong &mdash; Cinematic Realism</p>
+      <p class="subsection-desc">Sample 7 &middot; Highlight is a 12-frame excerpt demonstrating <strong>Environment Destruction</strong>&mdash;sustained <code>RT</code> activation on environmental elements (trees, structures, terrain) produces progressive destruction effects, confirming that discrete events propagate to the correct spatial regions.</p>
+      <div class="video-grid" id="grid-gen-bmw"></div>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">Custom Desert &mdash; Stylized Realism</p>
+      <p class="subsection-desc">Sample 11 &middot; Highlight is a 12-frame excerpt demonstrating <strong>NPC Hit Response</strong>&mdash;<code>RT</code> directed at NPCs produces hit markers, blood effects, and stagger animations. The model infers target regions from visual context without explicit segmentation.</p>
+      <div class="video-grid" id="grid-gen-desert"></div>
+    </div>
+
+    <hr>
+
+    <!-- SECTION 4: IN-DISTRIBUTION RESULTS -->
+    <h2 class="section-heading" id="sec-indistribution">4. In-Distribution Results</h2>
+    <p class="section-desc">
+      On games seen during training, SCOPE maintains high action-response fidelity and visual coherence, validating that the unified model does not sacrifice in-distribution quality for cross-game generalization.
+    </p>
+
+    <div class="subsection">
+      <p class="subsection-title">Modern Warfare</p>
+      <div class="video-grid" id="grid-test-mw"></div>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">WorldCam</p>
+      <div class="video-grid" id="grid-test-wc"></div>
+    </div>
+
+    <hr>
+
+    <!-- SECTION 5: COMPARISON WITH BASELINES -->
+    <h2 class="section-heading" id="sec-comparison">5. Comparison with Baselines</h2>
+    <p class="section-desc">
+      Side-by-side comparison between SCOPE and three baselines: Matrix-Game 3.0, LingBot-World (Act), and HY-World 1.5. All methods receive the same context frame and action sequence. Click the play button to synchronize playback across all four results.
+    </p>
+
+    <!-- Case 1: COD MW3 -->
+    <div class="compare-case" id="compare-cod">
+      <p class="compare-case-title">Case 1 &mdash; Call of Duty: Modern Warfare III</p>
+      <div class="compare-row">
+        <div class="compare-cell">
+          <span class="compare-label label-ours">SCOPE (Ours)</span>
+          <video src="static/videos/compare/cod_ours.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">Matrix-Game 3.0</span>
+          <video src="static/videos/compare/cod_mg3.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">LingBot-World</span>
+          <video src="static/videos/compare/cod_lingbot.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">HY-World 1.5</span>
+          <video src="static/videos/compare/cod_hy.mp4" loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <div class="compare-controls">
+        <button class="compare-play-btn" data-case="cod">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Play All
+        </button>
+        <div class="compare-speed" data-case="cod">
+          <span class="speed-label">Speed:</span>
+          <button class="speed-btn" data-speed="0.25">0.25x</button>
+          <button class="speed-btn" data-speed="0.5">0.5x</button>
+          <button class="speed-btn active" data-speed="1">1x</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: Halo -->
+    <div class="compare-case" id="compare-halo">
+      <p class="compare-case-title">Case 2 &mdash; Halo Infinite</p>
+      <div class="compare-row">
+        <div class="compare-cell">
+          <span class="compare-label label-ours">SCOPE (Ours)</span>
+          <video src="static/videos/compare/halo_ours.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">Matrix-Game 3.0</span>
+          <video src="static/videos/compare/halo_mg3.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">LingBot-World</span>
+          <video src="static/videos/compare/halo_lingbot.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">HY-World 1.5</span>
+          <video src="static/videos/compare/halo_hy.mp4" loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <div class="compare-controls">
+        <button class="compare-play-btn" data-case="halo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Play All
+        </button>
+        <div class="compare-speed" data-case="halo">
+          <span class="speed-label">Speed:</span>
+          <button class="speed-btn" data-speed="0.25">0.25x</button>
+          <button class="speed-btn" data-speed="0.5">0.5x</button>
+          <button class="speed-btn active" data-speed="1">1x</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: MW (another clip) -->
+    <div class="compare-case" id="compare-mw2">
+      <p class="compare-case-title">Case 3 &mdash; Modern Warfare</p>
+      <div class="compare-row">
+        <div class="compare-cell">
+          <span class="compare-label label-ours">SCOPE (Ours)</span>
+          <video src="static/videos/compare/mw2_ours.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">Matrix-Game 3.0</span>
+          <video src="static/videos/compare/mw2_mg3.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">LingBot-World</span>
+          <video src="static/videos/compare/mw2_lingbot.mp4" loop playsinline preload="metadata"></video>
+        </div>
+        <div class="compare-cell">
+          <span class="compare-label label-baseline">HY-World 1.5</span>
+          <video src="static/videos/compare/mw2_hy.mp4" loop playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <div class="compare-controls">
+        <button class="compare-play-btn" data-case="mw2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Play All
+        </button>
+        <div class="compare-speed" data-case="mw2">
+          <span class="speed-label">Speed:</span>
+          <button class="speed-btn" data-speed="0.25">0.25x</button>
+          <button class="speed-btn" data-speed="0.5">0.5x</button>
+          <button class="speed-btn active" data-speed="1">1x</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <footer>Anonymous submission · For review purposes only</footer>
+  <footer>Anonymous submission &middot; For review purposes only</footer>
 
+  <script src="static/action-tracks.js"></script>
   <script>
-    // chip helper
-    const C = (label, cls) => ({ label, cls });
-    const ARR = { arrow: true };
-
-    const actionSeqs = {
-      1: [
-        C('Move Forward','chip-move'), C('ADS','chip-aim'), C('Fire','chip-fire'),
-        ARR,
-        C('Switch Weapon','chip-weapon'),
-        ARR,
-        C('Move Forward','chip-move'),
-      ],
-      2: [
-        C('Move Forward-Right','chip-move'), C('Turn Right','chip-turn'),
-        ARR,
-        C('Move Forward','chip-move'),
-        ARR,
-        C('Jump','chip-jump'),
-        ARR,
-        C('Move Forward-Right','chip-move'),
-        ARR,
-        C('ADS','chip-aim'), C('Fire','chip-fire'),
-        ARR,
-        C('Move Forward-Right','chip-move'),
-      ],
-      3: [
-        C('ADS','chip-aim'), C('Move Left','chip-move'), C('Turn Left','chip-turn'),
-        ARR,
-        C('Turn Left','chip-turn'),
-        ARR,
-        C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Move Left','chip-move'), C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Move Left','chip-move'), C('Fire','chip-fire'),
-      ],
-      4: [
-        C('ADS','chip-aim'), C('Move Back-Right','chip-move'), C('Turn Right','chip-turn'),
-        ARR,
-        C('Turn Right','chip-turn'),
-        ARR,
-        C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Move Back-Right','chip-move'), C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Move Back-Right','chip-move'), C('Fire','chip-fire'),
-      ],
-      5: [
-        C('Move Forward','chip-move'),
-        ARR,
-        C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Reload','chip-reload'),
-        ARR,
-        C('Turn Right','chip-turn'),
-        ARR,
-        C('Move Forward','chip-move'),
-      ],
-      6: [
-        C('Move Forward','chip-move'),
-        ARR,
-        C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
-        ARR,
-        C('Turn Right','chip-turn'),
-        ARR,
-        C('Move Forward','chip-move'),
-      ],
-      7: [
-        C('Move Forward','chip-move'),
-        ARR,
-        C('Fire','chip-fire'),
-        ARR,
-        C('Reload','chip-reload'), C('Jump','chip-jump'),
-        ARR,
-        C('Turn Left','chip-turn'),
-        ARR,
-        C('Move Forward','chip-move'),
-      ],
-      8: [
-        C('Move Forward','chip-move'), C('Turn Right','chip-turn'),
-        ARR,
-        C('ADS','chip-aim'), C('Fire','chip-fire'),
-      ],
-      9: [
-        C('Move Forward','chip-move'),
-        ARR,
-        C('Move Forward-Right','chip-move'),
-      ],
-      10: [
-        C('ADS','chip-aim'), C('Fire','chip-fire'),
-      ],
-      11: [
-        C('Move Left/Right','chip-move'), C('ADS','chip-aim'), C('Fire','chip-fire'), C('Jump','chip-jump'),
-      ],
-      12: [
-        C('Move Forward-Left','chip-move'),
-        ARR,
-        C('Fire','chip-fire'),
-        ARR,
-        C('Move Forward-Right','chip-move'),
-      ],
-    };
+    const { actionTracks, actionSeqs } = window.SCOPE_ACTION_DATA;
 
     function buildSeq(seq) {
       if (!seq) return '';
       return seq.map(item =>
         item.arrow
           ? `<span class="action-arrow">→</span>`
-          : `<span class="action-chip ${item.cls}">${item.label}</span>`
+          : buildActionToken(item)
       ).join('');
+    }
+
+    function buildActionToken(item) {
+      if (!item) return '';
+      if (item.cls === 'chip-jump') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="pill-token-btn btn-a">A</span></span>`;
+      }
+      if (item.cls === 'chip-reload') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="pill-token-btn btn-x">X</span></span>`;
+      }
+      if (item.cls === 'chip-weapon') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="pill-token-btn btn-y">Y</span></span>`;
+      }
+      if (item.cls === 'chip-melee') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="pill-token-btn btn-r3">R3</span></span>`;
+      }
+      if (item.cls === 'chip-fire') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="mini-trigger">RT</span></span>`;
+      }
+      if (item.cls === 'chip-aim') {
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="mini-trigger">LT</span></span>`;
+      }
+      if (item.cls === 'chip-turn') {
+        const token = item.label;
+        const dir = /\+$/.test(token) ? 'dir-right' : 'dir-left';
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="mini-stick camera ${dir}"><span class="mini-stick-dot"></span></span><span class="action-chip-label token">${token}</span></span>`;
+      }
+      if (item.cls === 'chip-move') {
+        const token = item.label;
+        let dir = 'dir-up';
+        if (token === 'LY+') dir = 'dir-down';
+        if (token === 'LX-') dir = 'dir-left';
+        if (token === 'LX+') dir = 'dir-right';
+        return `<span class="action-chip visual-chip ${item.cls}"><span class="mini-stick move ${dir}"><span class="mini-stick-dot"></span></span><span class="action-chip-label token">${token}</span></span>`;
+      }
+      return `<span class="action-chip ${item.cls}">${item.label}</span>`;
+    }
+
+    function buildControlOverlay() {
+      return `
+        <div class="control-overlay">
+          <div class="overlay-row">
+            <div class="overlay-column overlay-column-left">
+              <div class="stick-panel">
+                <div class="stick-base move" data-role="move-base">
+                  <span class="stick-axis stick-axis-x"></span>
+                  <span class="stick-axis stick-axis-y"></span>
+                  <span class="stick-knob" data-role="move-knob"></span>
+                </div>
+              </div>
+            </div>
+            <div class="overlay-column overlay-column-center">
+              <div class="face-row">
+                <div class="trigger-pill lt" data-role="lt">LT</div>
+                <div class="trigger-pill rt" data-role="rt">RT</div>
+                <div class="face-button" data-btn="x"><span class="face-glyph face-glyph-reload"></span></div>
+                <div class="face-button" data-btn="y"><span class="face-glyph face-glyph-square"></span></div>
+                <div class="face-button" data-btn="a"><span class="face-glyph face-glyph-triangle"></span></div>
+                <div class="face-button" data-btn="r3"><span class="face-glyph face-glyph-circle"></span></div>
+              </div>
+            </div>
+            <div class="overlay-column overlay-column-right">
+              <div class="stick-panel">
+                <div class="stick-base camera" data-role="camera-base">
+                  <span class="stick-axis stick-axis-x"></span>
+                  <span class="stick-axis stick-axis-y"></span>
+                  <span class="stick-knob" data-role="camera-knob"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function setStickState(overlay, prefix, vector = {}) {
+      const x = Math.max(-1, Math.min(1, vector.x || 0));
+      const y = Math.max(-1, Math.min(1, vector.y || 0));
+      const base = overlay.querySelector(`[data-role="${prefix}-base"]`);
+      const knob = overlay.querySelector(`[data-role="${prefix}-knob"]`);
+      const active = Boolean(x || y);
+      if (base) base.classList.toggle('active', active);
+      if (knob) knob.style.transform = `translate(calc(-50% + ${x * 10}px), calc(-50% + ${y * 10}px))`;
+    }
+
+    function setButtonState(overlay, buttons = []) {
+      const activeButtons = new Set(buttons);
+      ['lt', 'rt'].forEach(btn => {
+        const el = overlay.querySelector(`[data-role="${btn}"]`);
+        if (el) el.classList.toggle('active', activeButtons.has(btn));
+      });
+      ['a', 'x', 'y', 'r3'].forEach(btn => {
+        overlay.querySelectorAll(`[data-btn="${btn}"]`).forEach(el => {
+          el.classList.toggle('active', activeButtons.has(btn));
+        });
+      });
+    }
+
+    function getTrackSegment(track, video) {
+      if (!track || !track.length) return null;
+      if (video.paused && video.currentTime === 0) return null;
+      if (track.length === 1) return track[0];
+      const duration = Number.isFinite(video.duration) && video.duration > 0 ? video.duration : track.length;
+      const progress = Math.min(video.currentTime / duration, 0.999999);
+      const index = Math.floor(progress * track.length);
+      return track[index] || track[track.length - 1];
+    }
+
+    function syncOverlay(video, overlay, track) {
+      if (!overlay) return;
+      const segment = getTrackSegment(track, video);
+      setStickState(overlay, 'move', segment?.move);
+      setStickState(overlay, 'camera', segment?.camera);
+      setButtonState(overlay, segment?.buttons || []);
+    }
+
+    function attachOverlay(video, wrap, trackKey) {
+      const track = actionTracks[trackKey];
+      if (!track) return;
+      wrap.insertAdjacentHTML('beforeend', buildControlOverlay());
+      const overlay = wrap.querySelector('.control-overlay');
+      const refresh = () => syncOverlay(video, overlay, track);
+      ['loadedmetadata', 'timeupdate', 'play', 'pause', 'seeked', 'ended'].forEach(eventName => {
+        video.addEventListener(eventName, refresh);
+      });
+      refresh();
+    }
+
+    function buildSpeedControl(video) {
+      const speeds = [0.25, 0.5, 1];
+      const container = document.createElement('div');
+      container.className = 'speed-control';
+      container.innerHTML = `<span class="speed-label">Speed:</span>`;
+      speeds.forEach(speed => {
+        const btn = document.createElement('button');
+        btn.className = 'speed-btn' + (speed === 1 ? ' active' : '');
+        btn.textContent = speed === 1 ? '1x' : speed + 'x';
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          video.playbackRate = speed;
+          container.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+        container.appendChild(btn);
+      });
+      return container;
     }
 
     function makeCard(id) {
@@ -610,7 +1704,7 @@
           <video src="static/videos/${id}.mp4" loop playsinline preload="metadata"></video>
           <div class="play-overlay">
             <div class="play-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </div>
           </div>
         </div>
@@ -626,6 +1720,11 @@
       const wrap = card.querySelector('.video-wrap');
       const video = wrap.querySelector('video');
       const overlay = wrap.querySelector('.play-overlay');
+      const footer = card.querySelector('.card-footer');
+
+      attachOverlay(video, wrap, String(id));
+
+      footer.appendChild(buildSpeedControl(video));
 
       overlay.addEventListener('click', () => {
         document.querySelectorAll('.video-wrap video').forEach(v => {
@@ -639,36 +1738,22 @@
       return card;
     }
 
-    const groups = {
-      'grid-gen-itw':    [1, 2],
-      'grid-hl-itw':     ['1h'],
-      'grid-gen-gi':     [3, 4, 5],
-      'grid-hl-gi':      ['3h'],
-      'grid-gen-bmw':    [6, 7],
-      'grid-hl-bmw':     ['7h'],
-      'grid-gen-desert': [11],
-      'grid-hl-desert':  ['11h'],
-      'grid-test-mw':    [8, 9, 10],
-      'grid-test-wc':    [12],
-    };
-
     function makeCardHL(id) {
       const numId = parseInt(id);
       const card = document.createElement('div');
-      card.className = 'video-card';
-      card.style.borderColor = '#fed7aa';
+      card.className = 'video-card highlight-card';
       card.innerHTML = `
         <div class="video-wrap">
           <video src="static/videos/${numId}_highlight.mp4" loop playsinline preload="metadata"></video>
           <div class="play-overlay">
             <div class="play-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </div>
           </div>
         </div>
-        <div class="card-footer" style="border-top-color:#fed7aa;">
+        <div class="card-footer">
           <div class="card-title-row">
-            <span class="sample-label">Sample ${numId} · Highlight</span>
+            <span class="sample-label">Sample ${numId} &middot; 12-Frame Highlight</span>
             <span class="sample-num" style="color:#c2410c;background:rgba(194,65,12,0.08);border-color:rgba(194,65,12,0.2);">HL</span>
           </div>
         </div>
@@ -677,6 +1762,11 @@
       const wrap = card.querySelector('.video-wrap');
       const video = wrap.querySelector('video');
       const overlay = wrap.querySelector('.play-overlay');
+      const footer = card.querySelector('.card-footer');
+
+      attachOverlay(video, wrap, String(numId));
+
+      footer.appendChild(buildSpeedControl(video));
 
       overlay.addEventListener('click', () => {
         document.querySelectorAll('.video-wrap video').forEach(v => {
@@ -689,16 +1779,147 @@
       return card;
     }
 
+    // ── Grid assignments ──
+    const groups = {
+      // Section 2: Action controllability
+      'grid-ctrl-multi': [
+        { path: 'static/videos/ctrl_scope_fire1.mp4', label: 'LT + RT', trackKey: 'ctrl_scope_fire1' },
+        { path: 'static/videos/ctrl_scope_fire2.mp4', label: 'LT + RT', trackKey: 'ctrl_scope_fire2' },
+        { path: 'static/videos/ctrl_fire_reload.mp4', label: 'RT + X', trackKey: 'ctrl_fire_reload' },
+      ],
+
+      // Section 3: Zero-shot generalization full videos + highlights
+      'grid-gen-itw':    [1, 2, '1h'],
+      'grid-gen-gi':     [3, 4, 5, '3h'],
+      'grid-gen-bmw':    [6, 7, '7h'],
+      'grid-gen-desert': [11, '11h'],
+      // Section 4: In-distribution
+      'grid-test-mw':    [8, 9, 10],
+      'grid-test-wc':    [12],
+    };
+
+    // Card factory for custom video objects
+    function makeCustomCard(item) {
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      const seq = item.seq || actionSeqs[item.trackKey];
+      card.innerHTML = `
+        <div class="video-wrap">
+          <video src="${item.path}" loop playsinline preload="metadata"></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="card-title-row">
+            <span class="sample-label">${item.label}</span>
+          </div>
+          ${seq ? `<div class="action-seq">${buildSeq(seq)}</div>` : ''}
+        </div>
+      `;
+
+      const wrap = card.querySelector('.video-wrap');
+      const video = wrap.querySelector('video');
+      const overlay = wrap.querySelector('.play-overlay');
+      const footer = card.querySelector('.card-footer');
+
+      attachOverlay(video, wrap, item.trackKey);
+
+      footer.appendChild(buildSpeedControl(video));
+
+      overlay.addEventListener('click', () => {
+        document.querySelectorAll('.video-wrap video').forEach(v => {
+          if (v !== video) { v.pause(); v.closest('.video-wrap').classList.remove('playing'); }
+        });
+        if (video.paused) { video.play(); wrap.classList.add('playing'); }
+        else { video.pause(); wrap.classList.remove('playing'); }
+      });
+      video.addEventListener('click', () => { video.pause(); wrap.classList.remove('playing'); });
+
+      return card;
+    }
+
     Object.entries(groups).forEach(([gridId, ids]) => {
       const grid = document.getElementById(gridId);
+      if (!grid) return;
       ids.forEach(id => {
-        if (typeof id === 'string' && id.endsWith('h')) {
+        if (typeof id === 'object' && id !== null && !id.arrow) {
+          grid.appendChild(makeCustomCard(id));
+        } else if (typeof id === 'string' && id.endsWith('h')) {
           grid.appendChild(makeCardHL(id));
         } else {
           grid.appendChild(makeCard(id));
         }
       });
     });
+
+    // ── Comparison section controls ──
+    document.querySelectorAll('.compare-play-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const caseId = btn.dataset.case;
+        const caseEl = document.getElementById('compare-' + caseId);
+        const videos = caseEl.querySelectorAll('.compare-row video');
+        const isPlaying = btn.classList.contains('playing');
+
+        if (isPlaying) {
+          videos.forEach(v => { v.pause(); v.currentTime = 0; });
+          btn.classList.remove('playing');
+          btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Play All`;
+        } else {
+          // Reset all to start
+          videos.forEach(v => { v.currentTime = 0; });
+          // Play all simultaneously
+          videos.forEach(v => v.play());
+          btn.classList.add('playing');
+          btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause All`;
+        }
+      });
+    });
+
+    document.querySelectorAll('.compare-speed .speed-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const speed = parseFloat(btn.dataset.speed);
+        const caseId = btn.closest('.compare-speed').dataset.case;
+        const caseEl = document.getElementById('compare-' + caseId);
+        const videos = caseEl.querySelectorAll('.compare-row video');
+
+        // Update active state
+        btn.closest('.compare-speed').querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Apply speed
+        videos.forEach(v => { v.playbackRate = speed; });
+      });
+    });
+
+    // ── Sidebar scroll-spy ──
+    const navLinks = document.querySelectorAll('.side-nav a');
+    const sectionIds = Array.from(navLinks).map(a => a.dataset.section);
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 120;
+      let currentId = sectionIds[0];
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          currentId = id;
+        }
+      }
+
+      navLinks.forEach(a => {
+        if (a.dataset.section === currentId) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
   </script>
 </body>
 </html>
